@@ -1,0 +1,98 @@
+
+  /* Dimmed Background Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.6); /* dark transparent */
+  backdrop-filter: blur(4px); /* blur background */
+  z-index: 1000;
+}
+.logo{
+    margin-top: -100px;
+}
+
+/* Centered Modal Signup Box */
+.signup-modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  animation: fadeSlideDown 0.6s ease;
+  text-align: center;
+}
+
+/* Heading animation and color */
+.signup-modal h2 {
+  color: #007BFF;
+  font-size: 28px;
+  margin-bottom: 20px;
+  animation: fadeSlideDown 0.6s ease-in-out;
+}
+
+/* Form inputs */
+.signup-modal input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.signup-modal button {
+  width: 100%;
+  padding: 12px;
+  background: #007BFF;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.signup-modal button:hover {
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Error & Success messages */
+.error, .success {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.error {
+  color: #d9534f;
+  background: #f8d7da;
+  border: 1px solid #f5c2c7;
+}
+
+.success {
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+

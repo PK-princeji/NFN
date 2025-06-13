@@ -1,0 +1,104 @@
+  /* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a base font and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Login container styling */
+.login-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+  margin-bottom: 20px;
+  color:rgb(70, 141, 150);
+}
+
+/* Form input fields */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit button */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Signup link */
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+  /* Unique 3D Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+
+/* Login Heading Styles */
+.login-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  color: #00f0ff; /* Neon blue color */
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 
+    1px 1px 0 #0ff, 
+    2px 2px 0 #0cc, 
+    3px 3px 0 #099; /* Creates a 3D look */
+  animation: popIn3D 0.8s ease-out;
+  letter-spacing: 3px;
+}
+
+/* 3D Zoom-in Animation */
+@keyframes popIn3D {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}

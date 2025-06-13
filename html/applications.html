@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplication of NATURAL FARMING NETWORK</title>
+ <link rel="stylesheet" href="../css/aplication.css">
+</head>
+<body>
+  <!-- Navigation Section -->
+ 
+  <div id="second1">
+   <div class="logo-container">
+  <!-- Logo with glowing animated border -->
+  <div class="logo-glow">
+    <img src="../img/logo.jpg" alt="Logo" class="logo-img" />
+  </div>
+  
+  <!-- Animated plant SVG with blooming flower -->
+  <div class="plant-animation">
+    <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <!-- Stem of the plant -->
+      <rect x="48" y="60" width="4" height="30" fill="#3a7d44" />
+      
+      <!-- Leaves on the stem -->
+      <path d="M50 65 C45 55, 35 55, 40 70" fill="#3a7d44" />
+      <path d="M50 65 C55 55, 65 55, 60 70" fill="#3a7d44" />
+      
+      <!-- Flower center with radius and color animation -->
+      <circle cx="50" cy="55" r="5" fill="#e94f37">
+        <animate attributeName="r" values="2;5;2" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="#e94f37;#ffb347;#e94f37" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Rotating flower petals -->
+      <g transform="translate(50 55)">
+        <circle class="petal" cx="0" cy="-10" r="4" fill="#ff69b4" opacity="0.8">
+          <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </svg>
+  </div>
+</div>
+
+      <div id="search-bar">
+        <input type="search" id="searchInput" placeholder="Search..." />
+        <button id="zzz" title="Search"></button>
+      </div>
+    </div>
+
+    <h1 id="heading">NATURAL FARMING NETWORK</h1>
+
+    <nav id="firstA">
+      <div class="uplink">
+        <button onclick="showQuestion(1)">Pest & Disease Management</button>
+      </div>
+      <div class="uplink">
+        <button onclick="showQuestion(2)">Irrigation Techniques</button>
+      </div>
+      <div class="uplink">
+        <button onclick="showQuestion(3)">Soil Health & Fertilization</button>
+      </div>
+    </nav>
+  </div>
+ 
+
+<!-- Banner Section -->
+<section class="main-title-section-bg">
+  <div class="banner-content">
+    <div class="banner-text">Form Management</div>
+    <div class="banner-subtext">WEB PAGE ! Form Management</div>
+  </div>
+</section>
+
+    <div id="sceand2" style="background-color: none;">
+        <!-- search bar -->
+
+
+        <script>
+            // Function to toggle the visibility of content when clicking the heading
+            function toggleContent(sectionId) {
+                var content = document.getElementById(sectionId);
+
+                // Toggle the display of the content section
+                if (content.style.display === "block") {
+                    content.style.display = "none"; // Hide if already visible
+                } else {
+                    content.style.display = "block"; // Show content
+                }
+            }
+
+            // Function to search content dynamically
+            function searchContent() {
+                var input, filter, contentSections, found, resultMessage;
+                input = document.getElementById('searchInput');
+                filter = input.value.toLowerCase();
+                contentSections = document.querySelectorAll('.content');
+                found = false; // Flag to track if any content was found
+
+                // Loop through all content sections
+                contentSections.forEach(function (section) {
+                    var text = section.textContent || section.innerText;
+                    if (text.toLowerCase().includes(filter)) {
+                        section.style.display = 'block'; // Show sections that match
+                        found = true;
+                    } else {
+                        section.style.display = 'none'; // Hide sections that don't match
+                    }
+                });
+
+                // Show "No Available Content" if no match found
+                resultMessage = document.getElementById('searchResult');
+                if (found) {
+                    resultMessage.innerHTML = '';
+                } else {
+                    resultMessage.innerHTML = 'No Available Content';
+                }
+            }
+        </script>
+
+
+        <div class="content">
+            <!-- difine Pest & Disease Management -->
+            <section>
+                <div class="question" id="question1">
+                    <header>
+                        <h1>Pest & Disease Management</h1>
+                    </header>
+
+                    <h2> Introduction to crop pest and disease managment </h2>
+                    <P>A pest is mainly defined as an organism that occurs where it is not wanted (weeds, mosses, and
+                        algae's) or an organism that has a detrimental effect on turf (fungi, insects, mammals, and
+                        birds).
+                        Plant disease is an impairment of the normal state of a plant that interrupts its critical
+                        functions. All plant species, wild and cultivated alike are subject to disease. Each plant
+                        species
+                        is susceptible to characteristic diseases; these are, in each case, relatively few in numbers.
+                        The
+                        occurrence and prevalence of diseases in plants vary from season to season, depending on
+                        environmental conditions, presence of the pathogen, and the plant varieties are grown.</P>
+                    <div style="display: inline;float: left;">
+
+                    </div>
+                    <div style="display: inline; float: right;">
+                        <iframe width="520" height="315"
+                            src="https://www.youtube.com/embed/o4onDkAbl9Y?si=kg1KNZTxdG5vqOMv"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h2>A step by step guide to crop pest and disease management</h2>
+                    <p>
+                        Pests and diseases infiltrate even healthy gardens. It is important to regularly check plants
+                        for spreading diseases or signs of pest damage in plants. A successful disease control program
+                        depends on crop production, which closely aligns with the goals of pest management. One must
+                        start with the selection of appropriate plant varieties, ar irrigation system that minimizes
+                        leaf wetness. Also, fertilizer program that results in optimal plant growth, plant density and
+                        canopy management that afford optimal air circulation and pesticide coverage when needed, a
+                        transplant program that minimizes transplant shock, a clean seedling production program,
+                        effective pest monitoring by scouting regularly during the season, and, a harvest and shipping
+                        procedure that maximizes shelf life and quality.</p>
+                    <img style="width: 40%; height:500px; float: right;"
+                        src="https://th.bing.com/th/id/OIP.p6s-fGXGzPC0m8HVsRPQIgAAAA?pid=ImgDet&w=159&h=118&c=7"
+                        alt="image of FARMING">
+                    <div>
+
+                        <ul type="square">
+
+                            <li>
+                                <button type="button" onclick="toggleContent('demo1')">
+                                    Avoiding Pests and
+                                    Disease
+                                </button>
+
+                                <p id="demo1" class="hidden">Some healthy plants have their internal pest and disease
+                                    prevention tools.
+                                    Plants will most attract diseases or pests when they are stressed by too much or too
+                                    little water. Check soil moisture regularly to track the effectiveness of your
+                                    watering strategy.</p>
+                            </li>
+                            <li>
+                                <button type="button" onclick="toggleContent('demo2')">
+                                    Identifying Pests
+                                </button>
+                                <p id="demo2" class="hidden">During the growth of the garden, keep an eye out for any
+                                    obvious bite
+                                    marks or colonies of bugs. Be sure to check the underside of plant leaves and along
+                                    plant stems. Identifying the bite marks and the plants that occur on may be all you
+                                    want to identify the pest. Other pests will be identified by their increasing
+                                    numbers.
+                                </p>
+                            </li>
+                            <li>
+                                <button type="button" onclick="toggleContent('demo3')">
+                                    Identifying Disease
+                                </button>
+                                <p id="demo3" class="hidden"> Some diseases are often much more challenging to identify
+                                    butare much
+                                    less likely to occur. Diseases will impact plants in the form of discolored leaves,
+                                    drooping leaves, or stunted growth. If you think a plant has a disease, first check
+                                    the soil moisture in the garden and pay close attention for a few days. More often
+                                    than not, watering plant issues are misdiagnosed as a disease.
+                                </p>
+                            </li>
+
+                            <p><b>Pest and disease management in vegetable crops</b> <br><br>
+
+
+                                Pests and diseases are responsible for millions of dollars in damages to
+                                vegetable plants each year. Vegetable diseases take their energy from the plants on
+                                which they thrive and they are responsible for a great deal of damage and are
+                                encouraged by wet weather, poor drainage, or inadequate airflow. Some vegetable
+                                plant diseases are characterized by a variety of symptoms, including moldy coatings,
+                                wilting, scabs, blotches, rusts, and rot.</p>
+                            <h3>Several common vegetable pests and diseases and their control are;
+                            </h3>
+
+                            <ul type="square">
+                                <li>
+                                    <button type="button" onclick="toggleContent('a1')">
+                                        Anthracnose
+                                    </button>
+                                    <p id="a1" class="hidden"> Tomatoes, cucumbers, melons, and beans are most affected
+                                        by anthracnose.
+                                        Symptoms have fruits and pods with small, sunken spots. Pinkish spores appear in
+                                        the center of the spots in wet weather. To control, apply neem sprays or liquid
+                                        copper before and during infection periods. Begin applications just as leaf buds
+                                        break in the early spring and the case of severely infected plants, you'll need
+                                        to properly destroy them.
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a2')">
+                                        Bacterial Leaf Spot
+                                    </button>
+                                    <p id="a2" class="hidden"> Infected plants have small, dark water-soaked spots on
+                                        plant leaves.
+                                        Bacterial leaf spot mainly affects tomatoes, peppers, and cabbage-family crops
+                                        in the vegetable garden. Apply sulfur-based fungicides weekly at the first sign
+                                        of disease to prevent its spread. Also, limit high-nitrogen fertilizers, rotate
+                                        crops and destroy any heavily infected vegetable plants.
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a3')">
+                                        Aphids
+
+                                    </button>
+                                    <p id="a3" class="hidden">In addition to pumpkins and squashes, aphids attack almost
+                                        all
+                                        vegetables,
+                                        including potatoes. There are winged and non-winged aphid types.</p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a4')">
+                                        Club Root
+                                    </button>
+                                    <p id="a4" class="hidden">A serious problem in gardens, clubroot infects brassica
+                                        crops such as
+                                        cabbage, broccoli, cauliflower, etc which wilt during the heat of the day. Older
+                                        plant leaves turn yellow and drop. Roots are distorted and swollen. Look for
+                                        disease-resistant plant varieties and rotate crops.
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a5')">
+                                        Downy Mildew
+                                    </button>
+                                    <p id="a5" class="hidden">Symptoms of downy mildew vary with environmental
+                                        conditions. The best way
+                                        to prevent downy mildew is to avoid the conditions that favor it. Prune plants
+                                        to improve air circulation. Downy mildew commonly damages brassicas, cucurbits,
+                                        onions, and leafy greens such as spinach and lettuce.</p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a6')">
+                                        Early Blight
+                                    </button>
+                                    <p id="a6" class="hidden">Symptoms of early blight include brown and black spots on
+                                        plant leaves
+                                        that enlarge and develop rings like a target. Leaves can die. Some prevention
+                                        measures are proper seed selection and using a copper-based fungicide early. The
+                                        best way to prevent blight is to avoid prolonged periods of wetness on the
+                                        surface of the plant leaves by watering in the morning or using drip irrigation
+                                        and by rotating your crops from year to year.
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <button type="button" onclick="toggleContent('a7')">
+                                        Late Blight
+                                    </button>
+                                    <p id="a7" class="hidden"> Late blight affects tomato and potato plants in the
+                                        garden. Select plant
+                                        resistant cultivars when available and dispose of all infected plants and
+                                        tubers. And, apply copper sprays every 7 days or less, following heavy rain or
+                                        when the amount of disease is increasing rapidly.
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a8')">
+                                        Cabbage Worm
+                                    </button>
+                                    <p id="a8" class="hidden">Cabbage worm adults are white or yellowish-white butterfly
+                                        larvae with
+                                        small light black color spots on the wings. They first appear around mid-April
+                                        and continue to be a problem until around mid-September. They mainly attack
+                                        cabbages, broccoli, cauliflowers, collard greens, and kale. They fly during the
+                                        day and lay eggs on the undersides of plant leaves.</p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a9')">
+                                        Powdery Mildew
+                                    </button>
+                                    <p id="a9" class="hidden">Powdery mildew is caused by the fungus Erysiphe
+                                        cichoracearum,
+
+                                        may attack all vine crops and other vegetables. The cucurbit crops commonly
+                                        affected are cucumber, gourd, muskmelon (cantaloupe), pumpkin, and squash,
+                                        Powdery mildew disease first appears around midsummer and will persist into the
+                                        fall. A major symptom is the appearance of small, circular, talcum-like spots
+                                        that gradually expand on vines and plant leaves.</p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a10')">
+                                        Rusts
+                                    </button>
+                                    <p id="a10" class="hidden">Rusts found on mature plants, comnton rusts affect
+                                        everything from
+                                        asparagus to beans, carrots, corn, and onions. Prevent infection by providing
+                                        good air circulation around vegetable crops. Remove and destroy seriously
+                                        affected plants. Early in the season, dust plants with sulfur powder to prevent
+                                        infection and to keep mild problems from spreading.
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('a11')">
+                                        Wilt, Fusarium, and Verticillium
+                                    </button>
+                                    <p id="a11" class="hidden">Affects a wide range of vegetable plants including
+                                        potatoes, tomatoes,
+                                        peppers, and melons. Symptoms include wilting plants and plant parts that turn a
+                                        yellow color. Crop rotation does not control these all diseases because so many
+                                        crops are susceptive.
+                                    </p>
+                                </li>
+
+                            </ul>
+                            <iframe width="530" height="322" margin="20" style="float: right;"
+                                src="https://www.youtube.com/embed/0US13rBCa5I"
+                                title="कीटों की पहचान और रोकथाम | identification and control of sucking pests | insect/pest insecticide"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                            Common pest and disease management of foliage and flowering plants
+
+
+                            <p>The common pests of foliage and flowering plants are spider mites, mealy
+                                bugs, fungus gnats, whitefly, and aphids. The use of plant material for outdoor as
+                                well as indoor decoration exposes them to all manner of pests, such as caterpillars,
+                                slugs, snails, and thrips, many of which thrive once the plants are moved back
+                                indoors. For this reason, plants which are being moved from decks, patios, etc. to
+                                the home or office should be washed thoroughly with a spray of clear water.</p>
+
+                            <p> Some diseases are rare on foliage and flowering plants. The only ones likely to be
+                                encountered are Botrytis, the gray mold fungus that invades dead and dying tissues,
+                                soft leaf spot, or crown rot fungi which thrive in moist atmospheres. The best cure
+                                is to remove affected plant parts, and avoid splashing the plant when watering, give
+                                space for air circulation, or move infected plants to a drier place.</p>
+                            <li> <button type="button" onclick="toggleContent('demo4')">
+                                    Control methods
+                                </button>
+                                <p id="demo4" class="hidden">Despite the best control programs employed by growers and
+
+                                    retailers, it happens that a new plant harbors pests whose eggs have survived to
+                                    hatch in your home conditions. A period of isolation (10-14 days) can be the answer.
+                                    Yet some pests could not show up for a longer time, being present in small numbers
+                                    until the indoor climate becomes more favorable; for example, spider mites thrive in
+                                    dry air, so may not become evident until the humid season is past
+
+                                    Regular and frequent checking for abnormal growth and insects can be combined with
+                                    checks for watering needs. Most pests lurk under plant leaves and close to the
+                                    growing tip where tissue is softest. Most of these pests can be washed off with a
+                                    spray of water. Several washes over 2 or 3 weeks, plus isolation for the infested
+                                    plant to prevent the pest from moving to other plants, generally eliminate the
+                                    problem. Chemical sprays are not pleasant to use and are recommended for outdoor
+                                    applications. Some pesticides are hazardous, not only to the environment but to the
+                                    plant tissue. Ferns are extremely sensitive to all forms of chemical spray, and
+                                    infested fronds are best removed and then destroyed.</p>
+                            </li>
+                            <h2>Common pests and diseases of fruit crops and their control</h2>
+                            <img style="width: 40%; height:500px; float: right;"
+                                src="https://www.agrifarming.in/wp-content/uploads/2020/07/Comp4-4.jpg"
+                                alt="image of FARMING">
+                            <p>The major pests inflicting considerable damage to fruit trees are scale insects, mites,
+                                termites, fruit flies, leaf miners, and mealy bugs.
+
+                            </p>
+                            <ul>
+                                <li> <button type="button" onclick="toggleContent('b1')">
+                                        Fire blight
+                                    </button>
+                                    <p id="b1" class="hidden">The pear, apple, and quince are liable to one mysterious
+                                        disease which it
+                                        is impossible to guard against or cure, the fire blight.
+
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('b2')">
+                                        Apple Blight
+                                    </button>
+                                    <p id="b2" class="hidden">Apple blight is another disease. Again, no better remedy
+                                        is known than to
+                                        cut out the infected part at once. In coping with insects we can act
+                                        intelligently and therefore successfully.
+
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('b3')">
+                                        Codling Moth
+                                    </button>
+                                    <p id="b3" class="hidden">The codling moth is another enemy that should be fought
+                                        resolutely. for
+                                        it destroys millions of pounds of fruit. The codling moth disease is a member of
+                                        the Lepidopteran family Tortricidae. They are major pests to crops, fruits such
+                                        as apples and pears. Because the larvae are not able to feed on plant leaves,
+                                        they are highly dependent on fruits as a food source and thus have a significant
+                                        impact on crops.
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('b4')">
+                                        Bacterial speck
+                                    </button>
+                                    <p id="b4" class="hidden">Bacterial speck is a bacterial disease and results in
+                                        small, black spots
+                                        on leaves, stems, and fruits of tomatoes, at all stages of plant growth. It is
+                                        common from winter to mid-spring. Copper hydroxide can give some control.</p>
+                                </li>
+
+                                <li> <button type="button" onclick="toggleContent('b5')">
+                                        Clubroot
+                                    </button>
+                                    <p id="b5" class="hidden">
+                                        Clubroot disease is a fungus disease that only affects Brassicas (the broccoli
+                                        family). Some plants are yellowish and stunted, with large malformed 'clubbed
+                                        roots Clubroot can be severe in warm weather. Avoid growing brassicas in the
+                                        same area for years and lime the soil if it is acidic.
+
+                                    </p>
+                                </li>
+
+                                <li> <button type="button" onclick="toggleContent('b6')"> Canker Worm
+                                    </button>
+                                    <p id="b6" class="hidden">The cankerworm in those localities where it is destructive
+                                        can be guarded
+                                        against by bands of tar-covered canvas around the fruit trees. The moth cannot
+                                        fly but crawls up the tree in the late autumn and during mild spells in winter,
+                                        but particularly throughout the spring until May.
+
+                                    </p>
+                                </li>
+                                Common pest and disease management of herbal crop
+
+                                <p>Herbs are resistant to garden pests and diseases. Growing any herb plant, thorough
+                                    soil preparation, good cultivation practices, adequate watering, and good drainage
+                                    keeps herbs growing well and trouble-free. The essential fragrant oils of most herbs
+                                    are a natural repellent to insects.
+
+                                </p>
+                                <li> <button type="button" onclick="toggleContent('c1')">
+                                        Aphids
+                                    </button>
+                                    <p id="c1" class="hidden">Aphids love the tender new leaves of herb plants and, in
+                                        large numbers,
+                                        may cause curling of the foliage. Aphids are commonly found among crowded and
+                                        rapidly growing herbs. Horticultural soaps and neem oil may aid in exterminating
+                                        these kinds of pests
+
+                                    </p>
+                                </li>
+
+                                <li> <button type="button" onclick="toggleContent('c2')">
+                                        Spider mites
+                                    </button>
+                                    <p id="c2" class="hidden">Spider mites prefer hot, dry conditions and are spotted on
+                                        the underside
+                                        of the herb leaves. Protecting the herbs from these pests is as simple as a
+                                        strong stream of water aimed at the foliage and regular irrigation.
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c3')">
+                                        Whiteflies
+                                    </button>
+                                    <p id="c3" class="hidden">Whiteflies will also appear on the underside of the plant
+                                        leaves.
+
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c4')">
+                                        Leafhoppers
+                                    </button>
+                                    <p id="c4" class="hidden"> Leafhoppers rarely do much damage but do feed on basil,
+                                        oregano, and
+                                        parsley, etc.
+
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c5')">
+                                        Leaf miners
+                                    </button>
+                                    <p id="c5" class="hidden">Leaf miners will attack succulent basil, leaving tunneling
+                                        trails between
+                                        the upper and lower leaf surfaces.
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c6')">
+
+                                        Flea beetles
+                                    </button>
+                                    <p id="c6" class="hidden"> Yet another pest, the flea beetle is again just that,
+                                        chewing pinprick
+                                        holes in the leaves of herb plants but sustaining no serious damage.
+
+
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c7')">
+                                        Weevils
+                                    </button>
+                                    <p id="c7" class="hidden">Weevils, such as the carrot weevil, will feed on parsley
+                                        roots but
+                                        inflict no lasting damage.
+
+
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c8')">
+                                        Caterpillars
+                                    </button>
+                                    <p id="c8" class="hidden"> Identify caterpillars as harmful before trying to
+                                        eradicate them and
+                                        black Swallowtail caterpillars are found on dill, fennel, parsley, and related
+                                        plants. In many gardens, dill and parsley are planted particularly to
+                                        attract this butterfly.
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c9')">
+                                        Rust
+                                    </button>
+                                    <p id="c9" class="hidden">A fungal disease found on the mint, lemon balm, and
+                                        similar plants, rust
+                                        are not destructive of the entire plant. Because mints are persistent and
+                                        propagate through underground runners, rust-infected plants can be cut back to
+                                        the ground and allowed to resprout.
+
+
+                                    </p>
+                                </li>
+                                <li> <button type="button" onclick="toggleContent('c10')">
+                                        Mildew
+                                    </button>
+                                    <p id="c10" class="hidden">Lemon balm and yarrow may show signs of powdery mildew.
+                                        Thinning,
+                                        clipping off the infected parts, and clipping adjacent plants back to increase
+                                        air circulation is effective.<br><br>
+
+                                        Very few herbs (mints and lemongrass) thrive in wet soil and waterlogged soils
+                                        encourage fungal diseases such as fusarium root rot. Symptoms appear as brown
+                                        streaks on the herb stems with a result of the general collapse of the plant.
+                                        Rust plagues many members of the mint family and presents itself as rusty orange
+                                        lesions on the underside of the plant leaves. Defenses against diseases of herbs
+                                        are proper conditions, sanitation, removal of weak or otherwise infested
+                                        foliage, and regular pruning. Raised beds will foster good drainage and watering
+                                        in the morning to give the herb plenty of time to dry out will retard the spread
+                                        of fungal spores which could result in disease.
+
+
+                                    </p>
+                                </li>
+                                <h2>Common methods of crop pest and disease management</h2>
+                                <img style="width: 60%; height:400px; float: right;margin: 20px;"
+                                    src="https://www.agrifarming.in/wp-content/uploads/2020/07/Comp3-4.jpg"
+                                    alt="image of FARMING">
+                                <p>Growers want to control pests and diseases to get maximum production and prevent crop
+                                    loss. Prevention of pests and diseases before any damage is done is most desirable.
+                                    Four common methods of control of pests and diseases are</p>
+
+                                <ul type="disc">
+                                    <li>Biological</li>
+                                    <li>Cultural</li>
+                                    <li>Chemical, and
+                                    </li>
+                                    <li>Integrated control
+                                    </li>
+                                </ul>
+                                <p><b>Chemical </b>-Using chemical control such as herbicides that control or retard the
+                                    growth of weeds.<br><br>
+
+                                    <b> Cultural</b>-Using practice such as controlled grazing, tilling, controlled
+                                    burning. revegetation, and hand pulling, etc.<br><br>
+
+                                    <b> Biological Control</b> - Using beneficial creatures such as insects or fungi
+                                    that damage the weeds.
+                                </p>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <button type="button" onclick="toggleContent('d1')">
+
+                                        Biological methods of crop pest and disease management
+
+                                    </button>
+                                    <p id="d1" class="hidden">This uses useful living organisms, such as predators or
+                                        parasites, to
+                                        control plant pests. Predator insects feed on the pests and control their
+                                        numbers. Some parasites live part of their life inside pests and finally kill
+                                        them. Biological can occur naturally or growers can release predators and
+                                        parasites deliberately. The use of bio-control agents in disease management is
+                                        increasing, especially among organic growers. These products are considered
+                                        safer for the environment and applicator than conventional
+                                        chemicals.<br><br><span style="font-size: 50px;">
+                                            Advantages and disadvantages of biological control
+                                            are,</span><br><br>Biological controls do not involve chemicals, so they
+                                        leave useful insects unharmed. They target the pest affected. Once established
+                                        biological control is very cheap, cost- free, and does not harm the
+                                        environment.<br><br>
+                                        The disadvantage is biological control is costly to develop and manage. It takes
+                                        time to work and the pest populations are high before there are significant
+                                        numbers of predators and parasites
+                                    </p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('d2')">
+                                        Cultural methods of crop pest and disease management
+                                    </button>
+                                    <div id="d2" class="hidden">
+                                        Cultural control methods involve changing the environment to make it undesirable
+                                        for pests and diseases. Cultural practices serve an important role in disease
+                                        prevention and management. The benefits of cultural control methods beginning
+                                        with the establishment of a growing environment that favors the crop over the
+                                        pathogen<br><br><span style="font-size:25px;color: #000;">Reducing plant stress
+                                            through environmental modification
+                                            promotes good plant health and aids in reducing damage from plant diseases.
+                                            Examples of cultural pest management methods are,<br><br>
+                                            <span>
+                                                <ul type="disc">
+                                                    <li>Mechanical tilling or plowing
+                                                    </li>
+                                                    <li>Hand pulling of the weed with all its roots</li>
+                                                    <li> Grazing sheep on leafy spurge to damage the plant leaves and
+                                                        stems
+                                                        and stop seed production
+                                                    </li>
+                                                </ul>
+                                            </span> <br>Controlled burning a weed-infested area to clear it for seeding
+                                            of
+                                            desirable plant
+                                        </span></div>
+                                </li>
+
+                                <li>
+                                    <button type="button" onclick="toggleContent('d3')">
+                                        Chemical methods of crop pest and disease management
+                                    </button>
+                                    <p id="d3" class="hidden">Chemical pesticides are used to control diseases, pests,
+                                        or weeds.
+                                        Chemical control is based on substances that are toxic or poisonous to the pests
+                                        involved. When chemical pesticides are applied to protect plants from pests,
+                                        diseases, and overgrowth by weeds, we speak of plant protection products. It is
+                                        of course important that the plant that requires protection does not itself
+                                        suffer from the toxic effects of the protection products. Pesticides are used to
+                                        control pests and these chemicals are also called insecticides</p>
+                                </li>
+                                <li>
+                                    <button type="button" onclick="toggleContent('d4')">
+                                        Integrated pest management (IPM)
+
+                                    </button>
+                                    <p id="d4" class="hidden">Integrated Pest Management (IPM) is also called Integrated
+                                        Pest Control,
+                                        is an effective and environmentally sensitive approach to pest management that
+                                        relies on a combination of common-sense practices. Commercial growers prevent
+                                        and control pests and diseases for optimum growth. Then, they choose the most
+                                        cost-effective management practice to match the type of crop they are growing
+                                        and the market they are supplying.<br><br>
+
+                                        Integrated Pest Management is a grower that uses a combination of cultural,
+                                        biological, and chemical methods to prevent and control pests and diseases. This
+                                        approach came about because pests and diseases have developed resistance to
+                                        chemicals, and consumers have become concerned about chemical use and residues
+                                        on fruit and vegetable crops. The method to use depends on the presence of
+                                        natural enemies, the type of cultural control methods obtainable, and
+                                        environmental factors.</p>
+                                </li>
+
+                            </ul>
+                        </ul>
+                    </div>
+                    <script>
+                        // Function to toggle the visibility of sections
+                        function toggleContent(pId) {
+                            var paragraph = document.getElementById(pId);
+
+                            // Toggle the 'hidden' class to show/hide content
+                            section.classList.toggle('hidden');
+                        }
+                    </script>
+                </div>
+
+                <div class="question" id="question2" style=" margin-left: 120px;
+                margin-right: 120px;
+                display: block;">
+                    <header>
+                        <h1>Irrigation Techniques</h1>
+                    </header>
+
+                    <div style=" margin-bottom: 25px; margin-top: 45px;float: center;"><img
+                            style="display: inline; "
+                            src="https://www.growerexperts.com/wp-content/uploads/2024/01/irrigation-7262563_640.jpg"
+                            alt="faerming image "></div>
+                    <div> <span>Irrigation is a vital component of modern agriculture, ensuring that crops receive
+                            adequate
+                            water to grow and thrive. <b><u>There are three main types of irrigation systems used in
+                                    agriculture:
+                                    surface, overhead, and drip irrigation.</u></b> Each system has its own
+                            advantages
+                            and
+                            disadvantages,
+                            and the choice of system depends on various factors such as the type of crop, soil type,
+                            and
+                            climate.
+
+                        </span></div> <br>
+
+                    <div id="tess" style=" margin-left: 120px;
+                        margin-right: 120px;
+                        display: block;">
+                        <h1>Table of Contents</h1>
+                        <ul>
+                            <li><a href="#surface-irrigation">Surface Irrigation</a></li>
+                            <li><a href="#furrow-irrigation">Furrow Irrigation</a></li>
+                            <li><a href="#basin-irrigation">Basin Irrigation</a></li>
+                            <li><a href="#border-irrigation">Border Irrigation</a></li>
+                            <li><a href="#sprinkler-irrigation">Sprinkler Irrigation</a></li>
+                            <li><a href="#rain-gun-irrigation">Rain Gun Irrigation</a></li>
+                            <li><a href="#center-pivot-irrigation">Center Pivot Irrigation</a></li>
+                            <li><a href="#lateral-move-irrigation">Lateral Move Irrigation</a></li>
+                            <li><a href="#micro-sprinkler-systems">Micro-Sprinkler Systems</a></li>
+                            <li><a href="#drip-irrigation">Drip Irrigation</a></li>
+                            <li><a href="#surface-drip-systems">Surface Drip Systems</a></li>
+                            <li><a href="#subsurface-drip-systems">Subsurface Drip Systems</a></li>
+                            <li><a href="#irrigation-management">Irrigation Management and Efficiency</a></li>
+                            <li><a href="#water-source">Water Source and Supply</a></li>
+                            <li><a href="#irrigation-system-design">Irrigation System Design</a></li>
+                            <li><a href="#irrigation-technology">Irrigation Technology and Innovation</a></li>
+                        </ul>
+                    </div>
+                    <h1 id="surface-irrigation">1. Surface Irrigation</h1>
+                    <div>
+
+
+                        <h2>Definition</h2>
+                        <p>Surface irrigation is a method of applying water to crops by letting it flow over the
+                            soil surface. This technique utilizes gravity to distribute water, allowing it to
+                            infiltrate the soil and reach plant roots.</p>
+
+                        <h2>Overview</h2>
+                        <p>In surface irrigation, water is delivered to the field through ditches or furrows and
+                            allowed to spread across the land. This method is one of the oldest forms of
+                            irrigation and is commonly used in agriculture.</p>
+
+                        <h2>Advantages</h2>
+                        <ul>
+                            <li><strong>Cost-Effective:</strong> Generally lower initial costs compared to more
+                                complex irrigation systems.</li>
+                            <li><strong>Simplicity:</strong> Easier to implement and manage in many situations,
+                                particularly in flat or gently sloping fields.</li>
+                            <li><strong>Water Savings:</strong> Can be efficient in terms of water use if
+                                properly managed, especially for deep-rooted crops.</li>
+                        </ul>
+
+                        <h2>Disadvantages</h2>
+                        <ul>
+                            <li><strong>Uniformity Issues:</strong> Water distribution can be uneven, leading to
+                                some areas being overwatered while others remain dry.</li>
+                            <li><strong>Soil Erosion:</strong> Excessive surface runoff can cause soil erosion
+                                and degradation.</li>
+                            <li><strong>Labor Intensive:</strong> Requires regular monitoring and maintenance to
+                                manage water flow and prevent issues like clogging.</li>
+                        </ul>
+
+                        <h2>Applications</h2>
+                        <p>Surface irrigation is commonly used for row crops (like corn and soybeans), orchards,
+                            and in regions with sufficient rainfall. It is particularly effective in areas with
+                            flat terrain and soils that have good infiltration rates.</p>
+
+                        <h2>Conclusion</h2>
+                        <p>Surface irrigation remains a widely used method for many farmers due to its
+                            simplicity and cost-effectiveness, but it requires careful management to maximize
+                            efficiency and minimize potential downsides.</p>
+
+
+
+                    </div>
+
+                    <h1 id="furrow-irrigation">2. Furrow Irrigation</h1>
+                    <div>
+
+
+
+
+                        <h2>Definition</h2>
+                        <p>Furrow irrigation is a method of surface irrigation where water is applied in furrows
+                            (small channels) between crop rows. The water flows through these channels, allowing
+                            it to infiltrate the soil and reach the root zone of the plants.</p>
+
+                        <h2>Overview</h2>
+                        <p>This method is commonly used for row crops, such as corn, soybeans, and cotton. It
+                            allows for controlled water distribution and efficient use of water resources.</p>
+
+                        <h2>Advantages</h2>
+                        <ul>
+                            <li><strong>Water Efficiency:</strong> Reduces water wastage by directing water to
+                                the root zone.</li>
+                            <li><strong>Improved Drainage:</strong> The furrows can help manage excess water and
+                                improve soil aeration.</li>
+                            <li><strong>Flexibility:</strong> Suitable for a wide variety of crops and soil
+                                types.</li>
+                        </ul>
+
+                        <h2>Disadvantages</h2>
+                        <ul>
+                            <li><strong>Labor Intensive:</strong> Requires more labor for setup and maintenance
+                                compared to some automated systems.</li>
+                            <li><strong>Potential for Erosion:</strong> Water runoff can cause soil erosion if
+                                not properly managed.</li>
+                            <li><strong>Uniformity Issues:</strong> Can lead to uneven water distribution if
+                                furrow design is not optimized.</li>
+                        </ul>
+
+                        <h2>Applications</h2>
+                        <p>Commonly used in agriculture for row crops, especially in regions where water is
+                            scarce or costly. It is particularly effective in flat or gently sloping fields.</p>
+
+
+
+                    </div>
+                    <h1 id="basin-irrigation">3. Basin Irrigation</h1>
+                    <div>
+
+
+
+                        <h2>Definition</h2>
+                        <p>Basin irrigation is a method of surface irrigation in which water is applied to
+                            small, leveled plots or basins surrounded by bunds (earthen ridges). The water fills
+                            the basin and gradually infiltrates into the soil, providing moisture to the crops.
+                        </p>
+
+                        <h2>Overview</h2>
+                        <p>This technique is particularly effective for crops that require consistent moisture,
+                            such as rice. The basins allow for controlled water application and can help manage
+                            water distribution efficiently.</p>
+
+                        <h2>Advantages</h2>
+                        <ul>
+                            <li><strong>Water Conservation:</strong> Helps in reducing evaporation losses since
+                                the water is held within the basin.</li>
+                            <li><strong>Uniform Water Distribution:</strong> Ensures that all plants in the
+                                basin receive adequate moisture.</li>
+                            <li><strong>Soil Erosion Control:</strong> Bunds help prevent soil erosion and
+                                runoff, protecting the soil structure.</li>
+                        </ul>
+
+                        <h2>Disadvantages</h2>
+                        <ul>
+                            <li><strong>Labor Intensive:</strong> Requires significant labor for construction
+                                and maintenance of bunds and basins.</li>
+                            <li><strong>Terrain Limitations:</strong> Best suited for flat areas; less effective
+                                on sloped or uneven terrain.</li>
+                            <li><strong>Waterlogging Risks:</strong> If not managed properly, basins can lead to
+                                waterlogging, which can harm crops.</li>
+                        </ul>
+
+                        <h2>Applications</h2>
+                        <p>Basin irrigation is primarily used in paddy fields for rice cultivation but can also
+                            be effective for other crops in regions with sufficient water supply.</p>
+
+
+                    </div>
+
+                    <h1 id="border-irrigation">4. Border Irrigation</h1>
+                    <div>
+
+
+                        <h2>Definition</h2>
+                        <p>Border irrigation is a method of surface irrigation where water is applied to long,
+                            narrow strips of land, bordered by low earthen ridges (borders). The water is
+                            directed along the borders and allowed to flow across the field, ensuring that crops
+                            receive adequate moisture.</p>
+
+                        <h2>Overview</h2>
+                        <p>This technique is effective for irrigating larger fields and is often used for crops
+                            such as grains, cotton, and other row crops. The layout allows for efficient water
+                            use and minimizes wastage.</p>
+
+                        <h2>Advantages</h2>
+                        <ul>
+                            <li><strong>Efficient Water Use:</strong> Water can be applied efficiently, reducing
+                                runoff and evaporation.</li>
+                            <li><strong>Reduced Soil Erosion:</strong> Borders help to control water movement
+                                and reduce erosion.</li>
+                            <li><strong>Flexibility in Management:</strong> Can be easily adjusted to
+                                accommodate different crops and field shapes.</li>
+                        </ul>
+
+                        <h2>Disadvantages</h2>
+                        <ul>
+                            <li><strong>Labor Intensive:</strong> Requires initial labor for construction and
+                                maintenance of borders.</li>
+                            <li><strong>Water Distribution Issues:</strong> If not managed properly, water
+                                distribution can be uneven, leading to some areas being over- or under-watered.
+                            </li>
+                            <li><strong>Dependence on Field Shape:</strong> Works best in rectangular or uniform
+                                fields; irregular shapes can complicate water distribution.</li>
+                        </ul>
+
+                        <h2>Applications</h2>
+                        <p>Border irrigation is commonly used in agriculture for various crops, especially in
+                            regions with sufficient water supply. It is particularly effective in flat terrains
+                            where water can flow evenly.</p>
+
+
+                    </div>
+                    <h1 id="sprinkler-irrigation">5. Sprinkler Irrigation</h1>
+                    <div>
+
+
+                        <h2>Definition</h2>
+                        <p>Sprinkler irrigation is a method of applying water to crops through a system of
+                            pipes, pumps, and sprinklers. The system distributes water in the form of small
+                            droplets, simulating natural rainfall.</p>
+
+                        <h2>Overview</h2>
+                        <p>This technique is widely used in various agricultural settings, including fields,
+                            orchards, and gardens. It allows for efficient water distribution and can be used on
+                            a variety of terrain types.</p>
+
+                        <h2>Advantages</h2>
+                        <ul>
+                            <li><strong>Water Efficiency:</strong> Minimizes water loss due to evaporation and
+                                runoff.</li>
+                            <li><strong>Uniform Coverage:</strong> Provides consistent water distribution across
+                                the field.</li>
+                            <li><strong>Flexibility:</strong> Can be adapted for different crop types and field
+                                shapes.</li>
+                        </ul>
+
+                        <h2>Disadvantages</h2>
+                        <ul>
+                            <li><strong>High Initial Costs:</strong> Installation can be expensive due to
+                                equipment and infrastructure.</li>
+                            <li><strong>Maintenance Requirements:</strong> Regular maintenance is needed to
+                                ensure efficient operation.</li>
+                            <li><strong>Wind Sensitivity:</strong> Wind can affect the uniformity of water
+                                application, leading to uneven coverage.</li>
+                        </ul>
+
+                        <h2>Applications</h2>
+                        <p>Sprinkler irrigation is commonly used for a wide range of crops, including fruits,
+                            vegetables, and grains. It is particularly beneficial in areas with limited water
+                            resources, as it allows for precise water management.</p>
+
+
+                    </div>
+
+                    <h1 id="rain-gun-irrigation">6. Rain Gun Irrigation</h1>
+                    <div>
+
+                        <section>
+                            <h2>Overview</h2>
+                            <p>A Rain Gun Irrigation System is designed to efficiently water crops and gardens
+                                by simulating natural rainfall through rotating sprinklers. This system ensures
+                                even water distribution, making it ideal for agricultural and landscaping
+                                purposes.</p>
+
+                            <h2>Key Components</h2>
+                            <ul>
+                                <li><strong>Rain Gun Sprinkler:</strong> Rotating device that distributes water
+                                    evenly.</li>
+                                <li><strong>Water Source:</strong> Connection to a water supply, such as a hose
+                                    or pump.</li>
+                                <li><strong>Control System:</strong> Automates watering based on moisture levels
+                                    or timers.</li>
+                                <li><strong>Relay Module:</strong> Controls the water valve for the rain gun.
+                                </li>
+                            </ul>
+
+                            <h2>Benefits</h2>
+                            <ul>
+                                <li>Efficient water usage</li>
+                                <li>Even distribution of moisture</li>
+                                <li>Automation saves time and labor</li>
+                                <li>Customizable watering schedules</li>
+                            </ul>
+                        </section>
+
+                    </div>
+
+                    <h1 id="center-pivot-irrigation">7. Center Pivot Irrigation</h1>
+                    <div>
+
+
+                        <section>
+                            <h2>Overview</h2>
+                            <p>A Center Pivot Irrigation System is a highly efficient way to irrigate crops over
+                                large circular fields. This system uses a rotating arm with sprinklers to
+                                distribute water evenly, minimizing water waste and labor costs.</p>
+
+                            <h2>Key Components</h2>
+                            <ul>
+                                <li><strong>Pivot Point:</strong> The central point around which the system
+                                    rotates.</li>
+                                <li><strong>Sprinklers:</strong> Distribute water over the field in a circular
+                                    pattern.</li>
+                                <li><strong>Wheeled Towers:</strong> Support the pivot system and allow
+                                    movement.</li>
+                                <li><strong>Control System:</strong> Automates irrigation based on various
+                                    factors like soil moisture and weather conditions.</li>
+                            </ul>
+
+                            <h2>Benefits</h2>
+                            <ul>
+                                <li>Efficient water usage and reduced runoff</li>
+                                <li>Even water distribution across the field</li>
+                                <li>Reduced labor costs through automation</li>
+                                <li>Flexibility to adjust irrigation schedules</li>
+                            </ul>
+                        </section>
+
+
+                    </div>
+                    <h1 id="lateral-move-irrigation">8. Lateral Move Irrigation</h1>
+                    <div>
+
+
+                        <section>
+                            <h2>Overview</h2>
+                            <p>A Lateral Move Irrigation System is an efficient way to irrigate crops across
+                                large rectangular fields. This system uses a series of wheeled pipes with
+                                sprinklers that move laterally to provide even water distribution, maximizing
+                                crop yield and minimizing water waste.</p>
+
+                            <h2>Key Components</h2>
+                            <ul>
+                                <li><strong>Wheeled System:</strong> Supports the irrigation mechanism, allowing
+                                    it to traverse the field.</li>
+                                <li><strong>Sprinklers:</strong> Distribute water evenly over the crops as the
+                                    system moves.</li>
+                                <li><strong>Control System:</strong> Automates irrigation based on soil
+                                    moisture, weather conditions, and time.</li>
+                                <li><strong>Water Source:</strong> Supplies water to the system through pipes or
+                                    hoses.</li>
+                            </ul>
+
+                            <h2>Benefits</h2>
+                            <ul>
+                                <li>Efficient use of water resources</li>
+                                <li>Reduced labor costs due to automation</li>
+                                <li>Uniform distribution of water, promoting healthy crop growth</li>
+                                <li>Flexibility in irrigation scheduling based on crop needs</li>
+                            </ul>
+                        </section>
+
+
+                    </div>
+
+                    <h1 id="micro-sprinkler-systems">9. Micro-Sprinkler Systems</h1>
+                    <div>
+
+
+                        <h2>Definition</h2>
+                        <p>Micro-sprinkler systems are irrigation systems that use small, low-flow sprinklers to
+                            deliver water directly to the root zone of plants. These systems are designed to
+                            apply water in a fine mist or small droplets, allowing for efficient and precise
+                            watering.</p>
+
+                        <h2>Overview</h2>
+                        <p>Micro-sprinklers are often used in orchards, vineyards, and greenhouse applications.
+                            They are effective in managing water use and can be adjusted to meet the specific
+                            needs of different crops.</p>
+
+                        <h2>Advantages</h2>
+                        <ul>
+                            <li><strong>Water Efficiency:</strong> Reduces water usage by applying water
+                                directly to the plant roots and minimizing evaporation.</li>
+                            <li><strong>Uniform Distribution:</strong> Provides even water coverage, promoting
+                                healthy plant growth.</li>
+                            <li><strong>Flexibility:</strong> Suitable for various crops and adaptable to
+                                different field layouts.</li>
+                        </ul>
+
+                        <h2>Disadvantages</h2>
+                        <ul>
+                            <li><strong>Initial Costs:</strong> Higher installation costs compared to
+                                traditional irrigation methods.</li>
+                            <li><strong>Maintenance Needs:</strong> Requires regular maintenance to prevent
+                                clogging and ensure efficiency.</li>
+                            <li><strong>Wind Sensitivity:</strong> Performance can be affected by wind, leading
+                                to uneven water application.</li>
+                        </ul>
+
+                        <h2>Applications</h2>
+                        <p>Micro-sprinkler systems are commonly used in horticulture, fruit orchards, and
+                            landscape irrigation. They are particularly beneficial in arid regions where water
+                            conservation is critical.</p>
+
+
+                    </div>
+
+                    <h1 id="drip-irrigation">10. Drip Irrigation</h1>
+                    <div>
+
+
+
+                        <h2>Definition</h2>
+                        <p>Drip irrigation is a method of watering plants in which water is delivered directly
+                            to the root zone of each plant through a network of tubing, pipes, and emitters.
+                            This system releases water slowly and efficiently, minimizing evaporation and
+                            runoff.</p>
+
+                        <h2>Overview</h2>
+                        <p>Drip irrigation is particularly effective for crops that require precise water
+                            management. It is widely used in agriculture, horticulture, and landscaping,
+                            especially in arid and semi-arid regions.</p>
+
+                        <h2>Advantages</h2>
+                        <ul>
+                            <li><strong>Water Conservation:</strong> Reduces water usage by delivering moisture
+                                directly to the plants, minimizing waste.</li>
+                            <li><strong>Improved Crop Yield:</strong> Promotes healthy plant growth by providing
+                                consistent moisture levels.</li>
+                            <li><strong>Weed Control:</strong> Limits water application to desired areas,
+                                reducing the growth of weeds.</li>
+                        </ul>
+
+                        <h2>Disadvantages</h2>
+                        <ul>
+                            <li><strong>Initial Cost:</strong> Higher setup costs compared to traditional
+                                irrigation methods.</li>
+                            <li><strong>Maintenance Needs:</strong> Requires regular maintenance to prevent
+                                clogging of emitters and other components.</li>
+                            <li><strong>Technical Knowledge:</strong> Proper design and management are essential
+                                for optimal performance.</li>
+                        </ul>
+
+                        <h2>Applications</h2>
+                        <p>Drip irrigation is commonly used for row crops, orchards, vineyards, and gardens. It
+                            is especially advantageous in regions with limited water resources.</p>
+
+
+
+                        <iframe width="618" height="470" style=" float:right;"
+                            src="https://www.youtube.com/embed/Blb0_8ZcMwc"
+                            title="Farming in Zambia: Drip Irrigation Systems: Simple, Direct and Cost-effective"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+
+
+
+                    <section>
+                        <h1 id="surface-drip-systems">11. Surface Drip Systems</h1>
+                        <div>
+
+
+
+                            <h2>Definition</h2>
+                            <p>Surface drip systems are a type of irrigation method where water is delivered
+                                directly to the soil surface through a network of tubes and emitters placed along
+                                the crop rows. This system allows for precise water application directly at the root
+                                zone of plants.</p>
+
+                            <h2>Overview</h2>
+                            <p>Surface drip irrigation is particularly beneficial in areas with limited water
+                                supply, as it minimizes evaporation and runoff. It is commonly used for row crops,
+                                orchards, and vineyards, providing an efficient means of irrigation.</p>
+
+                            <h2>Advantages</h2>
+                            <ul>
+                                <li><strong>Water Efficiency:</strong> Reduces overall water usage by applying water
+                                    directly where it is needed.</li>
+                                <li><strong>Reduced Weed Growth:</strong> Limits water application to crop areas,
+                                    minimizing moisture available for weeds.</li>
+                                <li><strong>Flexibility:</strong> Suitable for various crops and adaptable to
+                                    different field layouts.</li>
+                            </ul>
+
+                            <h2>Disadvantages</h2>
+                            <ul>
+                                <li><strong>Initial Investment:</strong> Higher installation costs compared to
+                                    conventional irrigation systems.</li>
+                                <li><strong>Maintenance Requirements:</strong> Needs regular checks to prevent
+                                    emitter clogging and system failure.</li>
+                                <li><strong>Technical Knowledge:</strong> Requires understanding of system design
+                                    and management for optimal performance.</li>
+                            </ul>
+
+                            <h2>Applications</h2>
+                            <p>Surface drip systems are commonly used in agriculture for various crops, especially
+                                in regions where water conservation is critical. They are effective for fruits,
+                                vegetables, and other specialty crops.</p>
+
+
+                        </div>
+                        <h1 id="subsurface-drip-systems">12. Subsurface Drip Systems</h1>
+                        <div>
+
+
+
+                            <h2>Definition</h2>
+                            <p>Subsurface drip systems are an irrigation method where water is delivered below the
+                                soil surface through a network of buried tubes or pipes equipped with emitters. This
+                                system allows for direct moisture application to the root zone, minimizing
+                                evaporation and surface runoff.</p>
+
+                            <h2>Overview</h2>
+                            <p>Subsurface drip irrigation is particularly effective in arid and semi-arid regions
+                                where water conservation is essential. It is commonly used for row crops, orchards,
+                                and vineyards, providing precise water management.</p>
+
+                            <h2>Advantages</h2>
+                            <ul>
+                                <li><strong>Water Efficiency:</strong> Significantly reduces water loss through
+                                    evaporation and runoff by delivering water directly to the roots.</li>
+                                <li><strong>Improved Soil Moisture:</strong> Maintains consistent moisture levels in
+                                    the root zone, promoting healthy plant growth.</li>
+                                <li><strong>Weed Control:</strong> Limits water application to the root area,
+                                    reducing the potential for weed growth.</li>
+                            </ul>
+
+                            <h2>Disadvantages</h2>
+                            <ul>
+                                <li><strong>High Initial Costs:</strong> Installation can be expensive due to the
+                                    materials and technology involved.</li>
+                                <li><strong>Maintenance Needs:</strong> Requires careful monitoring and maintenance
+                                    to prevent clogging and ensure system efficiency.</li>
+                                <li><strong>Technical Complexity:</strong> Needs proper design and management
+                                    expertise for effective operation.</li>
+                            </ul>
+
+                            <h2>Applications</h2>
+                            <p>Subsurface drip systems are widely used in agriculture for various crops, including
+                                fruits, vegetables, and field crops. They are particularly advantageous in regions
+                                with limited water resources and in soils that require careful moisture management.
+                            </p>
+
+
+                        </div>
+                        <h1 id="irrigation-management">13. Irrigation Management and Efficiency</h1>
+                        <div>
+
+
+                            <h2>Definition</h2>
+                            <p>Irrigation management refers to the planning and implementation of practices to
+                                optimize water use in agricultural systems. It involves the strategic allocation of
+                                water resources to ensure that crops receive adequate moisture while minimizing
+                                waste and environmental impact.</p>
+
+                            <h2>Overview</h2>
+                            <p>Efficient irrigation management is crucial for sustainable agriculture, particularly
+                                in regions facing water scarcity. It encompasses scheduling, monitoring, and
+                                adapting irrigation practices to meet the changing needs of crops and environmental
+                                conditions.</p>
+
+                            <h2>Key Components</h2>
+                            <ul>
+                                <li><strong>Water Scheduling:</strong> Determining the timing and amount of water
+                                    application based on crop needs, soil moisture levels, and weather conditions.
+                                </li>
+                                <li><strong>Soil Moisture Monitoring:</strong> Utilizing sensors and tools to
+                                    measure soil moisture and inform irrigation decisions.</li>
+                                <li><strong>System Maintenance:</strong> Regularly inspecting and maintaining
+                                    irrigation systems to ensure efficient operation and prevent leaks or blockages.
+                                </li>
+                            </ul>
+
+                            <h2>Benefits of Efficient Management</h2>
+                            <ul>
+                                <li><strong>Water Conservation:</strong> Reduces overall water consumption and
+                                    promotes sustainable use of water resources.</li>
+                                <li><strong>Improved Crop Yield:</strong> Enhances plant health and productivity by
+                                    ensuring optimal moisture levels.</li>
+                                <li><strong>Cost Savings:</strong> Lowers operational costs through reduced water
+                                    use and energy consumption.</li>
+                            </ul>
+
+                            <h2>Challenges</h2>
+                            <ul>
+                                <li><strong>Resource Limitations:</strong> Availability of water resources can limit
+                                    effective irrigation management.</li>
+                                <li><strong>Climate Variability:</strong> Changing weather patterns can impact
+                                    irrigation scheduling and effectiveness.</li>
+                                <li><strong>Technical Knowledge:</strong> Requires expertise and knowledge to
+                                    implement advanced irrigation practices effectively.</li>
+                            </ul>
+
+                            <h2>Conclusion</h2>
+                            <p>Effective irrigation management is essential for optimizing water use in agriculture,
+                                ensuring food security, and promoting environmental sustainability. By adopting
+                                efficient practices, farmers can enhance productivity while conserving vital water
+                                resources.</p>
+
+
+                        </div>
+
+
+                        <h1 id="water-source">14. Water Source and Supply</h1>
+                        <div>
+
+
+                            <h2>Definition</h2>
+                            <p>Water source and supply refer to the various sources from which water is obtained for
+                                irrigation and other agricultural uses. This includes both natural and artificial
+                                sources, which play a crucial role in the sustainability of agricultural practices.
+                            </p>
+
+                            <h2>Overview</h2>
+                            <p>Understanding water sources is essential for effective irrigation management,
+                                especially in regions where water is scarce. Effective management of water supply
+                                ensures that crops receive adequate moisture while maintaining ecological balance.
+                            </p>
+
+                            <h2>Types of Water Sources</h2>
+                            <ul>
+                                <li><strong>Surface Water:</strong> Includes rivers, lakes, and reservoirs that
+                                    collect rainwater and runoff. These are often the primary sources of irrigation
+                                    water.</li>
+                                <li><strong>Groundwater:</strong> Water stored underground in aquifers, which can be
+                                    accessed through wells. Groundwater is a vital resource, especially in arid
+                                    regions.</li>
+                                <li><strong>Rainwater Harvesting:</strong> The collection and storage of rainwater
+                                    for agricultural use. This method helps to conserve water and reduce dependency
+                                    on other sources.</li>
+                                <li><strong>Desalination:</strong> The process of removing salt from seawater to
+                                    make it suitable for irrigation and drinking. This is particularly important in
+                                    coastal areas with limited freshwater sources.</li>
+                            </ul>
+
+                            <h2>Importance of Water Supply Management</h2>
+                            <ul>
+                                <li><strong>Sustainable Use:</strong> Ensures that water resources are used
+                                    efficiently to meet the needs of crops without depleting the source.</li>
+                                <li><strong>Cost Efficiency:</strong> Proper management can reduce costs associated
+                                    with water procurement and irrigation.</li>
+                                <li><strong>Environmental Protection:</strong> Helps maintain the ecological balance
+                                    by preventing over-extraction and pollution of water sources.</li>
+                            </ul>
+
+                            <h2>Challenges</h2>
+                            <ul>
+                                <li><strong>Water Scarcity:</strong> Increasing demand for water due to population
+                                    growth and climate change can lead to shortages.</li>
+                                <li><strong>Pollution:</strong> Contamination of water sources from agricultural
+                                    runoff and industrial waste can affect water quality.</li>
+                                <li><strong>Infrastructure Needs:</strong> Inadequate infrastructure for water
+                                    distribution can hinder effective water supply management.</li>
+                            </ul>
+
+                            <h2>Conclusion</h2>
+                            <p>Managing water sources and supply is essential for sustainable agriculture. By
+                                understanding and optimizing water use, farmers can ensure productive crops while
+                                conserving vital water resources.</p>
+
+
+                        </div>
+
+                        <h1 id="irrigation-system-design">15. Irrigation System Design</h1>
+                        <div>
+
+                            <h2>Definition</h2>
+                            <p>Irrigation system design refers to the process of planning and implementing an
+                                irrigation system that effectively delivers water to crops while maximizing
+                                efficiency and minimizing waste. This involves considering factors such as crop
+                                type, soil characteristics, water availability, and climate conditions.</p>
+
+                            <h2>Overview</h2>
+                            <p>A well-designed irrigation system ensures optimal water application, promotes healthy
+                                plant growth, and supports sustainable agricultural practices. It is essential for
+                                maximizing yields and conserving water resources.</p>
+
+                            <h2>Key Components of Irrigation Design</h2>
+                            <ul>
+                                <li><strong>Water Source:</strong> Identification of a reliable water source,
+                                    whether it be surface water, groundwater, or rainwater harvesting.</li>
+                                <li><strong>Distribution System:</strong> The layout of pipes, channels, and
+                                    emitters that transport water to the plants. This includes surface, subsurface,
+                                    or overhead systems.</li>
+                                <li><strong>Control Mechanisms:</strong> Devices such as valves, timers, and sensors
+                                    that regulate water flow and application schedules.</li>
+                                <li><strong>Filtration and Treatment:</strong> Ensuring that water is clean and
+                                    suitable for irrigation to prevent clogging and damage to the system.</li>
+                            </ul>
+
+                            <h2>Design Considerations</h2>
+                            <ul>
+                                <li><strong>Crop Requirements:</strong> Understanding the specific water needs of
+                                    the crops being grown to tailor the system accordingly.</li>
+                                <li><strong>Soil Type:</strong> Analyzing soil properties to determine water
+                                    retention and drainage capabilities.</li>
+                                <li><strong>Topography:</strong> Considering the landscape and slope of the land to
+                                    optimize water distribution and minimize erosion.</li>
+                                <li><strong>Climate Conditions:</strong> Factoring in local weather patterns,
+                                    including rainfall, temperature, and humidity, to plan irrigation schedules.
+                                </li>
+                            </ul>
+
+                            <h2>Benefits of Effective Irrigation Design</h2>
+                            <ul>
+                                <li><strong>Water Conservation:</strong> Reduces water wastage by applying the right
+                                    amount of water directly to the crops.</li>
+                                <li><strong>Increased Crop Yield:</strong> Supports healthy plant growth and
+                                    maximizes agricultural productivity.</li>
+                                <li><strong>Cost Efficiency:</strong> Lowers operational costs through optimized
+                                    water use and reduced labor needs.</li>
+                            </ul>
+
+                            <h2>Challenges in Irrigation Design</h2>
+                            <ul>
+                                <li><strong>Initial Costs:</strong> High setup costs can be a barrier for farmers,
+                                    particularly in developing regions.</li>
+                                <li><strong>Maintenance Requirements:</strong> Systems require regular monitoring
+                                    and maintenance to ensure efficiency.</li>
+                                <li><strong>Technical Expertise:</strong> Successful design and implementation
+                                    require knowledge and skills in irrigation engineering.</li>
+                            </ul>
+
+                            <h2>Conclusion</h2>
+                            <p>Effective irrigation system design is crucial for sustainable agriculture. By
+                                carefully planning and implementing irrigation systems, farmers can enhance
+                                productivity while conserving valuable water resources.</p>
+
+
+                        </div>
+                        <h1 id="irrigation-technology">16. Irrigation Technology and Innovation</h1>
+                        <div>
+
+
+                            <h2>Definition</h2>
+                            <p>Irrigation technology and innovation refer to the advancements and new techniques
+                                developed to improve the efficiency, effectiveness, and sustainability of irrigation
+                                practices. These innovations help farmers optimize water usage, enhance crop yields,
+                                and reduce environmental impacts.</p>
+
+                            <h2>Overview</h2>
+                            <p>With growing concerns about water scarcity and climate change, modern irrigation
+                                technologies play a crucial role in sustainable agriculture. Innovations range from
+                                advanced irrigation systems to smart water management solutions that leverage data
+                                and technology.</p>
+
+                            <h2>Key Technologies in Irrigation</h2>
+                            <ul>
+                                <li><strong>Smart Irrigation Systems:</strong> Use sensors, weather data, and
+                                    automation to optimize water application schedules based on real-time needs.
+                                </li>
+                                <li><strong>Drip and Micro-Irrigation:</strong> Deliver water directly to the root
+                                    zone of plants, minimizing water loss and improving efficiency.</li>
+                                <li><strong>Soil Moisture Sensors:</strong> Monitor soil moisture levels to inform
+                                    irrigation decisions and prevent over- or under-watering.</li>
+                                <li><strong>Mobile Apps and Software:</strong> Provide farmers with tools for
+                                    scheduling, monitoring, and managing irrigation systems remotely.</li>
+                            </ul>
+
+                            <h2>Benefits of Irrigation Technology</h2>
+                            <ul>
+                                <li><strong>Increased Efficiency:</strong> Reduces water usage and energy costs by
+                                    applying water more accurately.</li>
+                                <li><strong>Improved Crop Management:</strong> Enables farmers to monitor crop
+                                    health and irrigation needs more effectively.</li>
+                                <li><strong>Data-Driven Decisions:</strong> Utilizes data analytics to enhance
+                                    irrigation strategies and resource allocation.</li>
+                            </ul>
+
+                            <h2>Challenges and Considerations</h2>
+                            <ul>
+                                <li><strong>High Initial Investment:</strong> Advanced technologies can require
+                                    significant upfront costs for installation and setup.</li>
+                                <li><strong>Technical Knowledge:</strong> Farmers may need training to effectively
+                                    utilize and maintain new technologies.</li>
+                                <li><strong>Access and Equity:</strong> Not all farmers have equal access to
+                                    advanced technologies, potentially widening the gap between different
+                                    agricultural sectors.</li>
+                            </ul>
+
+                            <h2>Future Trends in Irrigation Technology</h2>
+                            <ul>
+                                <li><strong>Integration with IoT:</strong> Increasing use of Internet of Things
+                                    (IoT) devices for real-time monitoring and automation of irrigation systems.
+                                </li>
+                                <li><strong>Use of Drones:</strong> Employing drones for precision agriculture to
+                                    assess crop health and optimize irrigation practices.</li>
+                                <li><strong>Climate Resilience:</strong> Developing technologies that help farmers
+                                    adapt to changing climate conditions and water availability.</li>
+                            </ul>
+
+                            <h2>Conclusion</h2>
+                            <p>Irrigation technology and innovation are vital for the future of sustainable
+                                agriculture. By embracing new technologies, farmers can improve water management,
+                                enhance crop productivity, and contribute to environmental sustainability.</p>
+
+
+                        </div>
+                        <h2>1. Introduction to Irrigation</h2>
+                        <p>Irrigation is the artificial application of water to assist in the growing of crops. It
+                            plays a vital role in agriculture, especially in arid regions.</p>
+                    </section>
+
+                    <section>
+                        <h2>2. Types of Irrigation Techniques</h2>
+                        <ul>
+                            <li>Surface Irrigation</li>
+                            <li>Drip Irrigation</li>
+                            <li>Sprinkler Irrigation</li>
+                            <li>Subsurface Irrigation</li>
+                            <li>Micro-Irrigation Techniques</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>3. Surface Irrigation</h2>
+                        <ol>
+                            <li><strong>Definition:</strong> This method uses gravity to distribute water over the
+                                soil surface.</li>
+                            <li><strong>Common Types:</strong>
+                                <ul>
+                                    <li>Furrow Irrigation</li>
+                                    <li>Flood Irrigation</li>
+                                    <li>Basin Irrigation</li>
+                                </ul>
+                            </li>
+                            <li><strong>Advantages:</strong> Low cost and ease of use.</li>
+                            <li><strong>Disadvantages:</strong> Water loss through evaporation and runoff.</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>4. Drip Irrigation</h2>
+                        <p>Drip irrigation delivers water directly to plant roots through a network of tubing and
+                            emitters, enhancing efficiency.</p>
+                        <ul>
+                            <li><strong>Applications:</strong> Ideal for row crops and orchards.</li>
+                            <li><strong>Benefits:</strong>
+                                <ul>
+                                    <li>Efficient water use</li>
+                                    <li>Reduced evaporation</li>
+                                    <li>Minimized weed growth</li>
+                                </ul>
+                            </li>
+                            <li><strong>Challenges:</strong> Higher initial costs and maintenance requirements.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>5. Sprinkler Irrigation</h2>
+                        <p>Sprinkler systems mimic rainfall, using pumps to distribute water through pipes and
+                            sprinklers.</p>
+                        <ul>
+                            <li><strong>Types of Systems:</strong>
+                                <ul>
+                                    <li>Center Pivot</li>
+                                    <li>Lateral Move</li>
+                                    <li>Stationary Systems</li>
+                                </ul>
+                            </li>
+                            <li><strong>Benefits:</strong>
+                                <ul>
+                                    <li>Flexibility in application</li>
+                                    <li>Coverage of large areas</li>
+                                </ul>
+                            </li>
+                            <li><strong>Limitations:</strong> High energy costs and potential for uneven
+                                distribution.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>6. Subsurface Irrigation</h2>
+                        <p>In subsurface irrigation, water is applied below the soil surface, reducing evaporation
+                            and weed growth.</p>
+                        <ul>
+                            <li><strong>Advantages:</strong> Directly delivers water to roots.</li>
+                            <li><strong>Ideal Conditions:</strong> Best suited for areas with high water tables.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>7. Micro-Irrigation Techniques</h2>
+                        <p>Micro-irrigation refers to highly efficient systems that deliver water in small amounts,
+                            ideal for precision agriculture.</p>
+                        <ul>
+                            <li><strong>Benefits:</strong>
+                                <ul>
+                                    <li>Precision watering</li>
+                                    <li>Reduces labor and water costs</li>
+                                </ul>
+                            </li>
+                            <li><strong>Implementation Challenges:</strong> Requires careful planning and knowledge
+                                of plant needs.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>8. Irrigation Scheduling</h2>
+                        <p>Proper irrigation scheduling is crucial for maximizing efficiency and ensuring optimal
+                            crop growth.</p>
+                        <ul>
+                            <li><strong>Methods of Scheduling:</strong>
+                                <ul>
+                                    <li>Soil moisture sensors</li>
+                                    <li>Weather-based scheduling</li>
+                                    <li>Fixed schedules</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>9. Water Management in Irrigation</h2>
+                        <p>Effective water management strategies are essential for conserving resources and
+                            improving crop yields.</p>
+                        <ul>
+                            <li><strong>Techniques for Minimizing Waste:</strong>
+                                <ul>
+                                    <li>Rainwater harvesting</li>
+                                    <li>Soil moisture management</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>10. Soil and Irrigation</h2>
+                        <p>Understanding soil types and moisture levels is vital for implementing effective
+                            irrigation practices.</p>
+                        <ul>
+                            <li><strong>Soil Types:</strong>
+                                <ul>
+                                    <li>Clay</li>
+                                    <li>Sandy</li>
+                                    <li>Loamy</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h2>11. Economic Aspects of Irrigation</h2>
+                        <p>Analyzing costs and returns associated with different irrigation systems helps farmers
+                            make informed decisions.</p>
+                        <ul>
+                            <li><strong>Costs Involved:</strong> Installation and maintenance expenses.</li>
+                            <li><strong>Return on Investment:</strong> Potential yields and profitability
+                                improvements.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>12. Environmental Impact of Irrigation</h2>
+                        <p>Irrigation can have significant environmental impacts, both positive and negative, which
+                            must be managed carefully.</p>
+                        <ul>
+                            <li><strong>Case Studies:</strong> Successful and problematic irrigation projects.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>13. Future Trends in Irrigation</h2>
+                        <p>Innovations in technology are shaping the future of irrigation, with an emphasis on
+                            sustainability and efficiency.</p>
+                        <ul>
+                            <li><strong>Technological Advancements:</strong> Smart irrigation systems and sensors.
+                            </li>
+                            <li><strong>Global Trends:</strong> Shifts in water availability and usage in
+                                agriculture.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>14. Conclusion</h2>
+                        <p>Sustainable irrigation practices are crucial for food security and environmental health.
+                        </p>
+                    </section>
+
+                    <footer>
+                        <p>References will be included here.</p>
+                    </footer>
+            </section>
+        </div>
+
+        <div class="question" id="question3">
+            <header>
+                <h1>Soil Health and Fertilization - Table of Contents</h1>
+            </header>
+
+            <!-- Table of Contents Section -->
+            <div class="toc" id="toc" margin-left: 140px; margin-right: 140px; display: block;>
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#soil-health-intr">Introduction to Soil Health</a></li>
+                    <li><a href="#soil-health-factors">Key Factors Affecting Soil Health</a></li>
+                    <li><a href="#soil-health-improvement">Ways to Improve Soil Health</a></li>
+                    <li><a href="#fertilization-intro">Introduction to Fertilization</a></li>
+                    <li><a href="#fertilizer-types">Types of Fertilizers</a></li>
+                    <li><a href="#fertilization-strategies">Fertilization Strategies</a></li>
+                    <li><a href="#sustainable-practices">Sustainable Soil and Fertilization Practices</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Sections on Soil Health and Fertilization -->
+            <section id="soil-health-intro">
+                <h2>Introduction to Soil Health</h2>
+                <p>Soil health refers to the ability of soil to function as a living system that supports plant growth,
+                    maintains water and nutrient cycling, and sustains a diverse ecosystem of organisms. Healthy soil is
+                    vital for food production and environmental sustainability.</p>
+            </section>
+
+            <section id="soil-health-factors">
+                <h2>Key Factors Affecting Soil Health</h2>
+                <ul>
+                    <li><strong>Soil Structure:</strong> Well-developed soil aggregates provide space for air and water
+                        to move.</li>
+                    <li><strong>pH Levels:</strong> Soil pH affects nutrient availability. Most plants prefer a neutral
+                        pH (6-7).</li>
+                    <li><strong>Organic Matter:</strong> Organic materials (e.g., compost, humus) improve soil fertility
+                        and structure.</li>
+                    <li><strong>Microorganisms:</strong> A healthy microbial community supports nutrient cycling and
+                        disease suppression.</li>
+                    <li><strong>Erosion and Compaction:</strong> Practices to prevent erosion and compaction help
+                        maintain healthy soil structure.</li>
+                </ul>
+            </section>
+
+            <section id="soil-health-improvement">
+                <h2>Ways to Improve Soil Health</h2>
+                <p>Improving soil health is a key aspect of sustainable farming. Techniques include:</p>
+                <ul>
+                    <li><strong>Composting:</strong> Adds organic matter and improves microbial activity.</li>
+                    <li><strong>Cover Crops:</strong> Prevent soil erosion and improve soil structure.</li>
+                    <li><strong>Reduced Tillage:</strong> Minimizes soil disturbance, preserving soil structure.</li>
+                    <li><strong>Crop Rotation:</strong> Helps prevent nutrient depletion and reduce pest buildup.</li>
+                    <li><strong>Mulching:</strong> Conserves moisture and regulates soil temperature.</li>
+                </ul>
+            </section>
+
+            <section id="fertilization-intro">
+                <h2>Introduction to Fertilization</h2>
+                <p>Fertilization is the process of adding nutrients to soil to promote plant growth. Plants require
+                    essential nutrients, such as nitrogen (N), phosphorus (P), and potassium (K), to grow. Fertilization
+                    ensures that these nutrients are available in sufficient quantities, particularly in soils that are
+                    nutrient-deficient.</p>
+            </section>
+
+            <section id="fertilizer-types">
+                <h2>Types of Fertilizers</h2>
+                <p>Fertilizers come in two main categories:</p>
+                <ul>
+                    <li><strong>Organic Fertilizers:</strong> Derived from natural sources like manure, compost, and
+                        bone meal.</li>
+                    <li><strong>Inorganic (Synthetic) Fertilizers:</strong> Manufactured chemical fertilizers that
+                        provide immediate nutrient availability.</li>
+                </ul>
+            </section>
+
+            <section id="fertilization-strategies">
+                <h2>Fertilization Strategies</h2>
+                <p>Effective fertilization strategies depend on the specific needs of the soil and plants. Some common
+                    strategies include:</p>
+                <ul>
+                    <li><strong>Balanced Fertilization:</strong> Using a mix of nutrients (NPK) to ensure plants get all
+                        essential nutrients.</li>
+                    <li><strong>Slow-Release Fertilizers:</strong> Nutrients are released gradually, reducing the risk
+                        of nutrient leaching.</li>
+                    <li><strong>Foliar Fertilization:</strong> Applying fertilizers directly to plant leaves to correct
+                        deficiencies quickly.</li>
+                </ul>
+            </section>
+
+            <section id="sustainable-practices">
+                <h2>Sustainable Soil and Fertilization Practices</h2>
+                <p>Sustainable farming practices focus on long-term soil health while minimizing environmental impact.
+                    Some practices include:</p>
+                <ul>
+                    <li><strong>Integrated Nutrient Management:</strong> Combining organic and inorganic fertilizers
+                        based on soil testing.</li>
+                    <li><strong>Green Manure:</strong> Growing crops that fix nitrogen, reducing the need for synthetic
+                        fertilizers.</li>
+                    <li><strong>Composting:</strong> Recycling organic materials to improve soil fertility and
+                        structure.</li>
+                </ul>
+            </section>
+
+            <script>
+                // Function to toggle the visibility of sections
+                function toggleContent(sectionId) {
+                    var sectiondoc = document.getElementById(sectionId);
+
+                    // Toggle the 'hidden' class to show/hide content
+                    sectiondoc.classList.toggle('hidden');
+                }
+            </script>
+        </div>
+
+
+    </div>
+    <script>
+        // Function of find docoment
+        function showQuestion(index) {
+            // Erase befor write docoment
+            const allQuestions = document.querySelectorAll('.question');
+            allQuestions.forEach(q => q.style.display = 'none');
+
+            // find result
+            const selectedQuestion = document.getElementById(`question${index}`);
+            selectedQuestion.style.display = 'block';
+        }
+    </script>
+    <br><br><br><br><br>
+    <footer id="footer">
+        <p style="text-align:center;color: rgb(169, 122, 157);padding-top: 30px;" class="font-14 mb-12">
+
+            Website Content Managed by intenship group of mishta kishan,Rahul,Gautam &amp; prince
+
+            <br>
+            Designed and Developed by PK prince raj
+        </p>
+        <span class="fa fa-facebook-square fa-3x"></span>
+        <div id="contect">
+            <a style="display: flex;padding: 10px; " href="https://www.youtube.com/@PrinceKumar-ed9ok/shorts">
+                <img width="40px" height="40px" style="border-radius: 35px;"
+                    src="data:image/png;base64,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"
+                    alt=" youtube icon"></a>
+            <a style="display: flex;padding: 10px; " href="hhttps://www.instagram.com/princeji3242/">
+                <img width="40px" height="40px" style="border-radius: 35px;"
+                    src="data:image/jpeg;base64,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"
+                    alt=" insttgram icon"></a>
+            <a style="display: flex; padding: 10px;" href="https://m.facebook.com/profile.php?id=100094146573978">
+                <img width="40px" height="40px" style="border-radius: 35px;"
+                    src="data:image/jpeg;base64,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"
+                    alt=" facebook icon"></a>
+            <a style="display: flex; padding: 10px;" href=" https://t.me/+VSU5uUScVkEyN2Jl">
+                <img width="40px" height="40px" style="border-radius: 35px;"
+                    src="data:image/jpeg;base64,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"
+                    alt=" telgram icon"></a>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

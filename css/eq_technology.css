@@ -1,0 +1,180 @@
+/* ========== Basic Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== Global Styles ========== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #222;
+}
+
+/* ========== Header Styles ========== */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container for header elements (logo, nav, search) */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo image styling */
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;         /* Makes logo circular */
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+/* ========== Navigation Menu ========== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* ========== Search Bar Styles ========== */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #4CAF50;
+}
+
+/* ========== Main Content ========== */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Headings */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #0645ad;
+}
+
+/* Grid Layout for Articles or Technology Cards */
+.article-grid,
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card/Article/Technology Item Styling */
+article,
+.tech-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article img,
+.tech-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+article h3,
+.tech-item h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+article p,
+.tech-item p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+article a,
+.tech-item a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover,
+.tech-item a:hover {
+    text-decoration: underline;
+}
+
+/* ========== Footer Styles ========== */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Social Media Icons in Footer */
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Footer Information */
+.footer-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
