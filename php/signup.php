@@ -1,83 +1,67 @@
 <?php
-// Include the database connection file
-include('dp.php');
-
-// Start session to manage login state
+include('dp.php');  // SQLite3 connection file
 session_start();
 
-// Initialize error and success message
 $error = "";
 $success_message = "";
 
-// Check if form is submitted for signup
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'signup') {
-
-    // Get form data safely
     $username = trim($_POST['new_username']);
     $email = trim($_POST['new_email']);
     $password = $_POST['new_password'];
     $confirm_password = $_POST['confirm_password'];
 
-    // Basic validations
     if (empty($username) || empty($email) || empty($password) || empty($confirm_password)) {
         $error = "Username, Email, and Password cannot be empty.";
     } elseif ($password !== $confirm_password) {
         $error = "Passwords do not match.";
     } else {
-        // Check if username already exists
-        $checkUsernameSQL = "SELECT * FROM user_info WHERE username = ?";
-        $stmt = $conn->prepare($checkUsernameSQL);
-        $stmt->bind_param("s", $username);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        if ($result->num_rows > 0) {
+        // Check if username exists
+        $stmt = $conn->prepare("SELECT * FROM user_info WHERE username = :username");
+        $stmt->bindValue(':username', $username, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        $userExists = $result->fetchArray(SQLITE3_ASSOC);
+        
+        if ($userExists) {
             $error = "Username already taken.";
         } else {
-            // Check if email already exists
-            $checkEmailSQL = "SELECT * FROM user_info WHERE email = ?";
-            $stmt = $conn->prepare($checkEmailSQL);
-            $stmt->bind_param("s", $email);
-            $stmt->execute();
-            $result = $stmt->get_result();
+            // Check if email exists
+            $stmt = $conn->prepare("SELECT * FROM user_info WHERE email = :email");
+            $stmt->bindValue(':email', $email, SQLITE3_TEXT);
+            $result = $stmt->execute();
+            $emailExists = $result->fetchArray(SQLITE3_ASSOC);
 
-            if ($result->num_rows > 0) {
+            if ($emailExists) {
                 $error = "Email is already associated with an account.";
             } else {
-                // Hash the password
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $status = 1;
 
                 // Insert new user
-                $insertSQL = "INSERT INTO user_info (username, email, pasword, status) VALUES (?, ?, ?, ?)";
+                $insertSQL = "INSERT INTO user_info (username, email, pasword, status) VALUES (:username, :email, :password, :status)";
                 $stmt = $conn->prepare($insertSQL);
-                $stmt->bind_param("sssi", $username, $email, $hashed_password, $status);
+                $stmt->bindValue(':username', $username, SQLITE3_TEXT);
+                $stmt->bindValue(':email', $email, SQLITE3_TEXT);
+                $stmt->bindValue(':password', $hashed_password, SQLITE3_TEXT);
+                $stmt->bindValue(':status', $status, SQLITE3_INTEGER);
 
-                if ($stmt->execute()) {
-                    // Fetch the user to login (using username as PK)
-                    $sql = "SELECT * FROM user_info WHERE username = ?";
-                    $stmt = $conn->prepare($sql);
-                    $stmt->bind_param("s", $username);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-                    $user = $result->fetch_assoc();
+                $result = $stmt->execute();
 
-                    if ($user && $user['status'] == 1) {
-                        $_SESSION['user_id'] = $user['username'];
-                        $_SESSION['username'] = $user['username'];
+                if ($result) {
+                    // Set session and redirect
+                    $_SESSION['user_id'] = $username;
+                    $_SESSION['username'] = $username;
 
-                        // Send welcome email
-                        $to = $email;
-                        $subject = "Welcome to Natural Farming Network!";
-                        $message = "Hello $username,\n\nThank you for signing up on Natural Farming Network.\nWe are happy to have you on board!\n\nRegards,\nTeam Natural Farming Network";
-                        $headers = "From: no-reply@naturalfarming.com";
+                    // Send welcome email
+                    $to = $email;
+                    $subject = "Welcome to Natural Farming Network!";
+                    $message = "Hello $username,\n\nThank you for signing up on Natural Farming Network.\nWe are happy to have you on board!\n\nRegards,\nTeam Natural Farming Network";
+                    $headers = "From: no-reply@naturalfarming.com";
 
-                        mail($to, $subject, $message, $headers);
+                    mail($to, $subject, $message, $headers);
 
-                        // Redirect with success
-                        header("Location: ../index.php?msg=signup_success");
-                        exit();
-                    }
+                    header("Location: ../index.php?msg=signup_success");
+                    exit();
                 } else {
                     $error = "Error creating account. Please try again.";
                 }
@@ -86,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

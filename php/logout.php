@@ -5,13 +5,13 @@ session_start();
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
 
-    // Update status to 0 using username as primary key
-    $sql = "UPDATE user_info SET status = 0 WHERE username = ?";
+    // SQLite3 में prepared statement
+    $sql = "UPDATE user_info SET status = 0 WHERE username = :username";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
+    $stmt->bindValue(':username', $username, SQLITE3_TEXT);
     $stmt->execute();
 
-    // Destroy session
+    // Session destroy करें
     session_unset();
     session_destroy();
 }

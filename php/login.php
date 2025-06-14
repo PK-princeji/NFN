@@ -1,8 +1,9 @@
 <?php
 session_start();
-include('dp.php');  // अपनी DB connection फाइल का सही path दें
+include('dp.php');  // DP file (SQLite connection)
 
-$error = "";  // error message के लिए वेरिएबल
+// Error message
+$error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST['username']);
@@ -11,37 +12,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($username) || empty($password)) {
         $error = "Please enter username and password.";
     } else {
-        $sql = "SELECT * FROM user_info WHERE username = ?";
+        // SQLite3 में prepared statement और bindValue यूज़ होता है
+        $sql = "SELECT * FROM user_info WHERE username = :username";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $username);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt->bindValue(':username', $username, SQLITE3_TEXT);
+        $result = $stmt->execute();
 
-        if ($result->num_rows == 0) {
+        $user = $result->fetchArray(SQLITE3_ASSOC);
+        if (!$user) {
             $error = "Username does not exist.";
+        } elseif ($password !== $user['pasword']) {
+            $error = "Incorrect password.";
         } else {
-            $user = $result->fetch_assoc();
-           if ($password !== $user['pasword']) {
-                $error = "Incorrect password.";
-            } else {
-                // Login successful: status 1 update करें
-                $update_sql = "UPDATE user_info SET status = 1 WHERE username = ?";
-                $update_stmt = $conn->prepare($update_sql);
-                $update_stmt->bind_param("i", $user['id']);
-                $update_stmt->execute();
+            // Login successful: status 1 update करें
+            $update_sql = "UPDATE user_info SET status = 1 WHERE username = :username";
+            $update_stmt = $conn->prepare($update_sql);
+            $update_stmt->bindValue(':username', $username, SQLITE3_TEXT);
+            $update_stmt->execute();
 
-                // Session सेट करें
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['username'] = $user['username'];
+            // Session सेट करें
+            $_SESSION['user_id'] = $user['username'];  // क्योंकि primary key username ही है
+            $_SESSION['username'] = $user['username'];
 
-                // Redirect करें और success message दिखाएं
-                header("Location: ../index.php?msg=login_success");
-                exit();
-            }
+            // Redirect करें
+            header("Location: ../index.php?msg=login_success");
+            exit();
         }
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
