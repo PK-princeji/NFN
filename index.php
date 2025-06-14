@@ -38,54 +38,13 @@ if (isset($_SESSION['user_id'])) {
     </div>
     
   <div>
-  <!-- <?php if ($is_logged_in): ?> -->
     <div id="nav-links">
       <a href="index.php">Home</a>
       <a href="html/farmmanagement.html" target="_blank">Farm Management</a>
       <a href="html/community&training.html" target="_blank">Community & Training</a>
       <a href="html/equipment&technology.html" target="_blank">Equipment & Technology</a>
-
-      <!-- <?php
-      // Input value for ML model
-      $input = 5;
-
-      // Prepare data in JSON format
-      $data = json_encode(array("input" => $input));
-
-      // Initialize CURL to Flask API URL (make sure /predict exists)
-      $ch = curl_init('http://127.0.0.1:8000/predict');
-
-      // Set CURL options
-      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-          'Content-Type: application/json',
-          'Content-Length: ' . strlen($data)
-      ));
-
-      // Execute API request and get response
-      $response = curl_exec($ch);
-      curl_close($ch);
-
-      // Decode the JSON response
-      $result = json_decode($response, true);
-
-      // Display prediction if available
-      if ($result && isset($result['prediction'])) {
-          echo "<p><strong>Prediction from ML model:</strong> " . htmlspecialchars($result['prediction']) . "</p>";
-      } else {
-          echo "<p><strong>Error:</strong> Unable to get prediction. Please check the API response.</p>";
-      }
-      ?> -->
-
       <a href="html/ai_features.html" target="_blank">AI Features</a>
-      <a href="php/logout.php" class="btn-logout">Logout</a>
-    </div>
-  <!-- <?php else: ?>
-    <span>Please login to access more features and explore more.</span>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="php/login.php" class="btn-login">Login</a>
-  <?php endif; ?> -->
+       
 </div>
 
   </nav>
