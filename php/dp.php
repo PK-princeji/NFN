@@ -1,19 +1,10 @@
 <?php
-// Database configuration
-$servername = "localhost";  // Hostname
-$username = "root";         // Database username
-$password = "";             // Database password
-$dbname = "NFN";            // Database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// SQLite connection
+$db_file = __DIR__ . '/nfn_database.db'; // DB file path
+$conn = new SQLite3($db_file);
 
 // Check connection
-if ($conn->connect_error) {
-    // Connection failed
-    die("Connection failed: " . $conn->connect_error);
-} else {
-    // Connection successful - Generally avoid echoing in production
-    // echo "Connection successful!";
+if (!$conn) {
+    die("Connection failed.");
 }
 ?>
