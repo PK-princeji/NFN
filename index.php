@@ -7,19 +7,19 @@ $is_logged_in = false;
 // Check login status using username (since it's the PK)
 if (isset($_SESSION['user_id'])) {
     $username = $_SESSION['user_id'];
-    $sql = "SELECT status FROM user_info WHERE username = ?";
+    $sql = "SELECT status FROM user_info WHERE username = :username";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
+    $stmt->bindValue(':username', $username, SQLITE3_TEXT);
+    $result = $stmt->execute();
 
+    $user = $result->fetchArray(SQLITE3_ASSOC);
     if ($user && $user['status'] == 1) {
         $is_logged_in = true;
         $_SESSION['username'] = $username;  // Make sure username session is set
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
