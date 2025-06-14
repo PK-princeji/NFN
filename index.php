@@ -38,14 +38,14 @@ if (isset($_SESSION['user_id'])) {
     </div>
     
   <div>
-  <?php if ($is_logged_in): ?>
+  <!-- <?php if ($is_logged_in): ?> -->
     <div id="nav-links">
       <a href="index.php">Home</a>
       <a href="html/farmmanagement.html" target="_blank">Farm Management</a>
       <a href="html/community&training.html" target="_blank">Community & Training</a>
       <a href="html/equipment&technology.html" target="_blank">Equipment & Technology</a>
 
-      <?php
+      <!-- <?php
       // Input value for ML model
       $input = 5;
 
@@ -77,15 +77,15 @@ if (isset($_SESSION['user_id'])) {
       } else {
           echo "<p><strong>Error:</strong> Unable to get prediction. Please check the API response.</p>";
       }
-      ?>
+      ?> -->
 
       <a href="html/ai_features.html" target="_blank">AI Features</a>
       <a href="php/logout.php" class="btn-logout">Logout</a>
     </div>
-  <?php else: ?>
+  <!-- <?php else: ?>
     <span>Please login to access more features and explore more.</span>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="php/login.php" class="btn-login">Login</a>
-  <?php endif; ?>
+  <?php endif; ?> -->
 </div>
 
   </nav>
@@ -156,9 +156,9 @@ if (isset($_SESSION['user_id'])) {
       <h2>Story of Dr. Manickaraj and Mrs. Nagarathinam</h2>
       <p>Dr. Manickaraj and Mrs. Nagarathinam started their journey in farming around 25 years ago. In the last 17 years, they have stuck to only natural farming methods. Despite lots of challenges and losses, they persevered. Today, they are happy with the output from their farm. In this video, the couple take us around to show us the different trees, crops, and other livestock components in their farm.</p>
     </div>
-    <div class="story-video">
+    <!-- <div class="story-video">
       <iframe width="500" height="295" src="https://www.youtube.com/embed/R_wkI_AsdNk?si=1G8MZp1V-ysLCMZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+    </div> -->
   </section>
 
   <!-- Footer Section -->
