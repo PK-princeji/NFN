@@ -30,13 +30,12 @@ if (isset($_SESSION['user_id'])) {
    
 </head>
 <body>
-  <!-- Navbar Section -->
   <nav id="navbar">
-    <div id="logo">
-      <img src="img/logo.jpg" alt="Natural Farming Logo" />
-      <span>Natural Farming Network</span>
-    </div>
-    
+  <div id="logo">
+    <img src="img/logo.jpg" alt="Natural Farming Logo" />
+    <span>Natural Farming Network</span>
+  </div>
+  
   <div>
     <div id="nav-links">
       <a href="index.php">Home</a>
@@ -44,10 +43,9 @@ if (isset($_SESSION['user_id'])) {
       <a href="html/community&training.html" target="_blank">Community & Training</a>
       <a href="html/equipment&technology.html" target="_blank">Equipment & Technology</a>
       <a href="html/ai_features.html" target="_blank">AI Features</a>
-       
-</div>
-
-  </nav>
+    </div>  <!-- closing nav-links div -->
+  </div>    <!-- closing the parent div -->
+</nav>
 
   <!-- Hero Section -->
   <section id="hero">
