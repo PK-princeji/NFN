@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Recommendation</title>
+  <link rel="stylesheet" href="../css/Crop_Recommendation.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>🌱 Crop Recommendation</h2>
+    <form action="crop_recommend.php" method="post">
+      <input type="number" step="any" name="nitrogen" placeholder="Nitrogen (N)" required>
+      <input type="number" step="any" name="phosphorus" placeholder="Phosphorus (P)" required>
+      <input type="number" step="any" name="potassium" placeholder="Potassium (K)" required>
+      <input type="number" step="any" name="ph" placeholder="pH Value" required>
+      <input type="number" step="any" name="rainfall" placeholder="Rainfall (mm)" required>
+      <input type="number" step="any" name="temperature" placeholder="Temperature (°C)" required>
+      <input type="number" step="any" name="humidity" placeholder="Humidity (%)" required>
+      <button type="submit">Recommend Crop</button>
+    </form>
+  </div>
+
+</body>
+</html>

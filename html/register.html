@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="signup-modal">
+    <h2>Register</h2>  <!-- Register heading added -->
+
+    <form action="../php/register.php" method="post">
+      <input type="text" name="new_username" placeholder="Username" required />
+      <input type="email" name="new_email" placeholder="Email" required />
+      <input type="password" name="new_password" placeholder="Password" required />
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      <input type="hidden" name="action" value="signup" />
+      <button type="submit">Register</button>
+    </form>
+
+    <p class="login-link" style="font-family: 'Orbitron', sans-serif;">
+      Already have an account? <a href="login.html">Login here</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,10 +1,8 @@
 <?php
-$db_file = __DIR__ . '/../nfn_database.db';
-
 try {
-    $conn = new SQLite3($db_file);
-    echo "Database connection successful!";
+    $db = new SQLite3('test.db');
+    echo "✅ SQLite is working and connected!";
 } catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
+    echo "❌ Error: " . $e->getMessage();
 }
 ?>

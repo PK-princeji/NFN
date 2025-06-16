@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Natural Farming Network</title>
+  <link rel="stylesheet" href="../css/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+  <style>
+    input::placeholder {
+      color: #666;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2 class="login-heading">User Login</h2>
+
+    <form action="../php/login.php" method="post">
+      <input type="text" name="username" placeholder="Enter Username" required />
+      <input type="password" name="password" placeholder="Enter Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="signup-link" style="margin-top: 15px;">
+      <a href="reset_password.html">Forgot Password?</a><br><br>
+      <span>
+        Don’t have an account? <a href="register.html">Register here</a>
+      </span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,5 +1,4 @@
-
-  /* Dimmed Background Overlay */
+/* Dimmed Background Overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -33,7 +32,7 @@
 
 /* Heading animation and color */
 .signup-modal h2 {
-  color: #007BFF;
+  color: #374350;
   font-size: 28px;
   margin-bottom: 20px;
   animation: fadeSlideDown 0.6s ease-in-out;
@@ -96,3 +95,39 @@
   border: 1px solid #c3e6cb;
 }
 
+/* New styles for login link below the form */
+.signup-modal p.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  font-family: 'Orbitron', sans-serif;
+  color: #374350;
+}
+
+.signup-modal p.login-link a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.signup-modal p.login-link a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.login-link a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

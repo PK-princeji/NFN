@@ -1,36 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>community&training</title>
-    <link rel="stylesheet" href="../css/tranning.css">
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community & Training</title>
+  <link rel="stylesheet" href="../css/tranning.css">
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="../img/logo.jpg" alt="Natural Farming Network Logo">
-            <span>Natural Farming Network</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#technology">Technology</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="search" placeholder="Search">
-            <button type="button">Search</button>
-        </div>
-    </header>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="../img/logo.jpg" alt="Natural Farming Network Logo" />
+      <span>Natural Farming Network</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#initiatives">Community</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#online">Online Training</a></li>
+        <li><a href="#doubts">Doubt & Notes</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="search" placeholder="Search" />
+      <button type="button">Search</button>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-     
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Empowering Farmers Through Community & Training</h1>
+    <p>Connecting, educating, and supporting farmers for a greener tomorrow.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Our Community & Training Program</h2>
+    <p>Our goal is to build a connected community of natural farmers and provide ongoing training programs that empower individuals with sustainable farming knowledge and techniques.</p>
+  </section>
+
+  <!-- Community Initiatives -->
+  <section id="initiatives" class="section">
+    <h2>Community Initiatives</h2>
+    <ul>
+      <li>🌾 Village-level workshops & farmer meetups</li>
+      <li>📱 WhatsApp groups for instant help and tips</li>
+      <li>📢 Awareness campaigns for organic & natural practices</li>
+      <li>👩‍🌾 Women in Farming – support for women farmers</li>
+    </ul>
+  </section>
+
+  <!-- Training Programs -->
+  <section id="training" class="section">
+    <h2>Training Programs</h2>
+    <div class="training-grid">
+      <div class="training-card">
+        <h3>Basic Natural Farming</h3>
+        <p>Learn about soil preparation, seed treatment, and natural composting methods.</p>
+      </div>
+      <div class="training-card">
+        <h3>Advanced Techniques</h3>
+        <p>Includes crop rotation, pest control using desi methods, and yield enhancement tips.</p>
+      </div>
+      <div class="training-card">
+        <h3>Digital Agriculture</h3>
+        <p>Use of mobile apps, IoT devices, and AI tools to manage farms efficiently.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Training Section -->
+  <section id="online" class="section">
+    <h2>Online Training Facilities</h2>
+    <ul>
+      <li>🎥 Recorded video classes (Basic to Advanced farming)</li>
+      <li>📅 Live webinars with experts every weekend</li>
+      <li>📚 Downloadable PDF notes in Hindi & English</li>
+      <li>📱 Mobile App-based learning support</li>
+      <li>🧪 Self-assessment quizzes and progress tracking</li>
+    </ul>
+  </section>
+
+  <!-- Doubt and Notes Section -->
+<section id="doubts" class="section">
+  <h2>Doubts, Notes & Recorded Trainings</h2>
+
+  <!-- Doubt Submission Form -->
+  <h3>Ask Your Doubt</h3>
+  <form action="php/submit_doubt.php" method="POST">
+    <textarea name="doubt" rows="4" cols="50" placeholder="Type your farming-related doubt here..."></textarea><br><br>
+    <button type="submit">Submit Doubt</button>
+  </form>
+
+  <!-- Notes Upload Form -->
+  <h3>Upload Your Own Farming Notes (PDF/Word)</h3>
+  <form action="php/upload_notes.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="user_note" accept=".pdf,.doc,.docx" required>
+    <button type="submit">Upload Note</button>
+  </form>
+
+  <!-- Downloadable Notes Section -->
+  <h3>📘 Download Expert Study Notes (PDF)</h3>
+  <ul>
+    <li><a href="../notes/soil_preparation.pdf" download>📄 Soil Preparation Guide</a></li>
+    <li><a href="../notes/crop_selection.pdf" download>🌾 Crop Selection & Season</a></li>
+    <li><a href="../notes/fertilizer_guide.pdf" download>🧪 Natural Fertilizer Guide</a></li>
+    <li><a href="../notes/pest_control.pdf" download>🐛 Organic Pest Management</a></li>
+    <li><a href="../notes/irrigation_methods.pdf" download>💧 Irrigation Methods</a></li>
+    <li><a href="../notes/digital_agriculture.pdf" download>📱 Digital Farming & IoT Tools</a></li>
+  </ul>
+
+  <!-- Recorded Video Training Section -->
+  <h3>🎥 Live Training – Recorded Video Library</h3>
+  <div class="video-grid">
+
+    <div class="video-card">
+      <h4>Intro to Natural Farming</h4>
+      <video width="320" controls>
+        <source src="../videos/video1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Soil Health & Composting</h4>
+      <video width="320" controls>
+        <source src="../videos/video2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Crop Rotation Techniques</h4>
+      <video width="320" controls>
+        <source src="../videos/video3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Natural Fertilizer Making</h4>
+      <video width="320" controls>
+        <source src="../videos/video4.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Desi Pesticides Preparation</h4>
+      <video width="320" controls>
+        <source src="../videos/video5.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Seed Treatment Process</h4>
+      <video width="320" controls>
+        <source src="../videos/video6.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Digital Farming Tools</h4>
+      <video width="320" controls>
+        <source src="../videos/video7.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Drip & Sprinkler Irrigation</h4>
+      <video width="320" controls>
+        <source src="../videos/video8.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>AI in Crop Monitoring</h4>
+      <video width="320" controls>
+        <source src="../videos/video9.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h4>Farm Budgeting & Planning</h4>
+      <video width="320" controls>
+        <source src="../videos/video10.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year">2024</span> Natural Farming Network. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
