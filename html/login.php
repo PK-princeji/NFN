@@ -1,0 +1,34 @@
+<?php
+session_start();
+
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+$csrfToken = $_SESSION['csrf_token'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Natural Farming Network</title>
+  <link rel="stylesheet" href="../css/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <h2 class="login-heading">User Login</h2>
+    <form action="../php/login.php" method="post">
+      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>" />
+      <input type="text" name="username" placeholder="Enter Username" required autocomplete="username" />
+      <input type="password" name="password" placeholder="Enter Password" required autocomplete="current-password" />
+      <button type="submit">Login</button>
+    </form>
+    <div class="signup-link" style="margin-top: 15px;">
+      <a href="reset_password.php">Forgot Password?</a><br><br>
+      <span>Don’t have an account? <a href="register.php">Register here</a></span>
+    </div>
+  </div>
+</body>
+</html>

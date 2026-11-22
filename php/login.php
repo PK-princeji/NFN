@@ -3,13 +3,8 @@ session_start();
 
 require_once __DIR__ . '/db.php';
 
-function redirectWithMessage(string $message): never {
-    header('Location: ../index.php?msg=' . urlencode($message));
-    exit;
-}
-
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: ../html/login.html');
+    header('Location: ../html/login.php');
     exit;
 }
 
@@ -42,4 +37,5 @@ $_SESSION['user_id'] = (int) $user['id'];
 $_SESSION['username'] = (string) $user['username'];
 unset($_SESSION['csrf_token']);
 
-redirectWithMessage('loggedin');
+header('Location: ../index.php?msg=loggedin');
+exit;

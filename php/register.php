@@ -1,49 +1,71 @@
 <?php
-include 'db.php';  // Ensure this file sets up $db as your SQLite3 or PDO object
+session_start();
 
-$error = '';
-$success_message = '';
+require_once __DIR__ . '/db.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] === 'signup') {
-    // Sanitize inputs
-    $user = trim($_POST['new_username'] ?? '');
-    $email = trim($_POST['new_email'] ?? '');
-    $pass = $_POST['new_password'] ?? '';
-    $confirm_pass = $_POST['confirm_password'] ?? '';
-
-    // Basic validations
-    if (empty($user) || empty($email) || empty($pass) || empty($confirm_pass)) {
-        $error = "Please fill in all fields.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = "Invalid email address.";
-    } elseif ($pass !== $confirm_pass) {
-        $error = "Passwords do not match.";
-    } else {
-        // Check if username or email already exists
-        $checkStmt = $db->prepare("SELECT COUNT(*) as count FROM users WHERE username = :user OR email = :email");
-        $checkStmt->bindValue(':user', $user);
-        $checkStmt->bindValue(':email', $email);
-        $result = $checkStmt->execute();
-        $row = $result->fetchArray(SQLITE3_ASSOC);
-        if ($row['count'] > 0) {
-            $error = "Username or email already exists.";
-        } else {
-            // Hash password before storing (very important for security)
-            $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
-
-            // Insert into DB
-            $insertStmt = $db->prepare("INSERT INTO users (username, email, password) VALUES (:user, :email, :pass)");
-            $insertStmt->bindValue(':user', $user);
-            $insertStmt->bindValue(':email', $email);
-            $insertStmt->bindValue(':pass', $hashedPass);
-
-            if ($insertStmt->execute()) {
-                $success_message = "✅ Registered successfully! You can now <a href='../php/login.php'>login</a>.";
-            } else {
-                $error = "⚠️ Registration failed, please try again.";
-            }
-        }
-    }
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: register.php');
+    exit;
 }
-?>
 
+if (!isset($_POST['csrf_token'], $_SESSION['csrf_token']) ||
+    !hash_equals($_SESSION['csrf_token'], (string) $_POST['csrf_token'])) {
+    http_response_code(403);
+    exit('Invalid or expired form. Please try again.');
+}
+
+$user = trim((string) ($_POST['new_username'] ?? ''));
+$email = trim((string) ($_POST['new_email'] ?? ''));
+$password = (string) ($_POST['new_password'] ?? '');
+$confirmPassword = (string) ($_POST['confirm_password'] ?? '');
+
+if ($user === '' || $email === '' || $password === '' || $confirmPassword === '') {
+    http_response_code(400);
+    exit('Please fill in all fields.');
+}
+
+if (!preg_match('/^[A-Za-z0-9_.-]{3,50}$/', $user)) {
+    http_response_code(400);
+    exit('Username must be 3–50 characters and contain only letters, numbers, dots, underscores, or hyphens.');
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    exit('Invalid email address.');
+}
+
+if (strlen($password) < 8) {
+    http_response_code(400);
+    exit('Password must be at least 8 characters long.');
+}
+
+if (!hash_equals($password, $confirmPassword)) {
+    http_response_code(400);
+    exit('Passwords do not match.');
+}
+
+$stmt = $db->prepare('SELECT COUNT(*) AS count FROM user_info WHERE username = :username OR email = :email');
+$stmt->bindValue(':username', $user, SQLITE3_TEXT);
+$stmt->bindValue(':email', $email, SQLITE3_TEXT);
+$result = $stmt->execute();
+$row = $result->fetchArray(SQLITE3_ASSOC);
+
+if ((int) $row['count'] > 0) {
+    http_response_code(409);
+    exit('Username or email already exists.');
+}
+
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+$insert = $db->prepare('INSERT INTO user_info (username, email, password) VALUES (:username, :email, :password)');
+$insert->bindValue(':username', $user, SQLITE3_TEXT);
+$insert->bindValue(':email', $email, SQLITE3_TEXT);
+$insert->bindValue(':password', $hashedPassword, SQLITE3_TEXT);
+
+if (!$insert->execute()) {
+    http_response_code(500);
+    exit('Registration failed. Please try again.');
+}
+
+unset($_SESSION['csrf_token']);
+header('Location: ../html/login.php?registered=1');
+exit;
